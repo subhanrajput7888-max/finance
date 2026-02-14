@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Loan EMI Calculator - MoneyCalcPro</title>
+    <meta name="description" content="Calculate your personal loan EMI, monthly payments, and total interest with our free personal loan calculator. Accurate results instantly.">
+    <meta name="keywords" content="personal loan calculator, EMI calculator, loan payment calculator, personal loan EMI">
+    <meta name="author" content="MoneyCalcPro">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta property="og:title" content="Personal Loan EMI Calculator - MoneyCalcPro">
+    <meta property="og:description" content="Calculate your personal loan EMI, monthly payments, and total interest with our free personal loan calculator. Accurate results instantly.">
+    <meta property="og:type" content="webpage">
+    <meta property="og:url" content="https://moneycalcpro.com/calculators/personal-loan.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Personal Loan EMI Calculator - MoneyCalcPro">
+    <meta name="twitter:description" content="Calculate your personal loan EMI, monthly payments, and total interest with our free personal loan calculator. Accurate results instantly.">
+    
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Personal Loan EMI Calculator",
+        "description": "Calculate your personal loan EMI, monthly payments, and total interest",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://moneycalcpro.com/index.html"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculators",
+            "item": "https://moneycalcpro.com/tools.html"
+        },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Personal Loan EMI Calculator",
+            "item": "https://moneycalcpro.com/calculators/personal-loan.html"
+        }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is an EMI?"
+        },
+        {
+            "@type": "Question",
+            "name": "How does the loan tenure affect my EMI?"
+        },
+        {
+            "@type": "Question",
+            "name": "Can I prepay my personal loan?"
+        }]
+    }
+    </script>
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html"><img src="../images/logo.png" alt="MoneyCalcPro Logo" width="150" height="40"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../tools.html">Tools</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Personal Loan EMI Calculator</h1>
+                <p>Calculate your monthly loan payments and total interest for personal loans</p>
+            </div>
+        </section>
+
+        <section class="calculator-page">
+            <div class="container">
+                <div class="calculator-container">
+                    <form id="personalLoanForm" class="calculator-form">
+                        <div class="input-group">
+                            <label for="principal">Loan Amount ($)</label>
+                            <input type="number" id="principal" name="principal" min="1000" max="10000000" step="100" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="rate">Interest Rate (% per annum)</label>
+                            <input type="number" id="rate" name="rate" min="1" max="50" step="0.1" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="months">Loan Tenure (months)</label>
+                            <input type="number" id="months" name="months" min="1" max="360" step="1" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Calculate EMI</button>
+                    </form>
+                    
+                    <div class="result-container">
+                        <h3>Loan Summary</h3>
+                        <div id="emiResult">
+                            <p>Enter your loan details to see the results</p>
+                        </div>
+                    </div>
+                    
+                    <div class="explanation">
+                        <h3>How the Personal Loan EMI Calculator Works</h3>
+                        <p>The EMI (Equated Monthly Installment) is calculated using the formula:</p>
+                        <p>EMI = [P x R x (1+R)^N]/[(1+R)^N-1]</p>
+                        <p>Where:</p>
+                        <ul>
+                            <li>P = Principal loan amount</li>
+                            <li>R = Monthly interest rate (annual rate divided by 12 and 100)</li>
+                            <li>N = Number of monthly installments</li>
+                        </ul>
+                        <p>The EMI consists of both principal and interest components. Initially, a larger portion goes toward interest, but as the loan tenure progresses, more of your EMI goes toward reducing the principal.</p>
+                    </div>
+                    
+                    <div class="faq-section">
+                        <h3>Frequently Asked Questions</h3>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>What is an EMI?</strong></div>
+                            <div class="faq-answer">An EMI (Equated Monthly Installment) is a fixed amount paid by a borrower to a lender at a specified date each month to repay a loan. It includes both principal and interest components.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>How does the loan tenure affect my EMI?</strong></div>
+                            <div class="faq-answer">A longer loan tenure results in lower monthly EMIs but higher total interest paid over the life of the loan. Conversely, a shorter tenure means higher EMIs but lower total interest.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>Can I prepay my personal loan?</strong></div>
+                            <div class="faq-answer">Yes, most lenders allow prepayment of personal loans. However, some may charge a prepayment penalty, typically ranging from 2% to 5% of the outstanding amount.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo-footer">
+                        <img src="../images/logo.png" alt="MoneyCalcPro Logo" width="120" height="32">
+                    </div>
+                    <p>Smart Finance & Insurance Calculators for Better Decisions</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><strong>Rana Subhan</strong></p>
+                    <p>Phone: 03157845223</p>
+                    <p>Email: subhanrajput3222@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../tools.html">Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 MoneyCalcPro. All rights reserved. | Owner: Rana Subhan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

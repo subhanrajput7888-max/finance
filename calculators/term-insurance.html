@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Term Insurance Calculator - MoneyCalcPro</title>
+    <meta name="description" content="Calculate term insurance premium and coverage with our free term insurance calculator. Find the right protection for your family.">
+    <meta name="keywords" content="term insurance calculator, life insurance calculator, term life insurance, insurance premium calculator">
+    <meta name="author" content="MoneyCalcPro">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta property="og:title" content="Term Insurance Calculator - MoneyCalcPro">
+    <meta property="og:description" content="Calculate term insurance premium and coverage with our free term insurance calculator. Find the right protection for your family.">
+    <meta property="og:type" content="webpage">
+    <meta property="og:url" content="https://moneycalcpro.com/calculators/term-insurance.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Term Insurance Calculator - MoneyCalcPro">
+    <meta name="twitter:description" content="Calculate term insurance premium and coverage with our free term insurance calculator. Find the right protection for your family.">
+    
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Term Insurance Calculator",
+        "description": "Calculate term insurance premium and coverage",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://moneycalcpro.com/index.html"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculators",
+            "item": "https://moneycalcpro.com/tools.html"
+        },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Term Insurance Calculator",
+            "item": "https://moneycalcpro.com/calculators/term-insurance.html"
+        }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How much term insurance do I need?"
+        },
+        {
+            "@type": "Question",
+            "name": "What's the difference between term and permanent life insurance?"
+        },
+        {
+            "@type": "Question",
+            "name": "Can I convert term insurance to permanent insurance?"
+        }]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>MoneyCalcPro</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../tools.html">Tools</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Term Insurance Calculator</h1>
+                <p>Calculate the appropriate term insurance coverage amount and premium</p>
+            </div>
+        </section>
+
+        <section class="calculator-page">
+            <div class="container">
+                <div class="calculator-container">
+                    <form id="termInsuranceForm" class="calculator-form">
+                        <div class="input-group">
+                            <label for="insuredAge">Age of Insured Person</label>
+                            <input type="number" id="insuredAge" name="insuredAge" min="18" max="65" step="1" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="sumAssured">Sum Assured ($)</label>
+                            <input type="number" id="sumAssured" name="sumAssured" min="100000" max="100000000" step="10000" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="insuranceTerm">Insurance Term (years)</label>
+                            <input type="number" id="insuranceTerm" name="insuranceTerm" min="5" max="40" step="1" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" required>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Calculate Premium</button>
+                    </form>
+                    
+                    <div class="result-container">
+                        <h3>Term Insurance Estimate</h3>
+                        <div id="termInsuranceResult">
+                            <p>Enter your details to see the premium estimate</p>
+                        </div>
+                    </div>
+                    
+                    <div class="explanation">
+                        <h3>How the Term Insurance Calculator Works</h3>
+                        <p>Term insurance premiums are calculated based on several factors including age, health, lifestyle, and coverage amount. Generally, younger and healthier individuals pay lower premiums. The premium is determined by:</p>
+                        <ul>
+                            <li>Age of the insured (younger people pay less)</li>
+                            <li>Sum assured (higher coverage costs more)</li>
+                            <li>Term of the policy (longer terms may have different rates)</li>
+                            <li>Gender (statistically, women live longer)</li>
+                            <li>Smoking status (smokers pay higher premiums)</li>
+                        </ul>
+                        <p>Term insurance provides pure life coverage without any savings component, making it more affordable than permanent life insurance options.</p>
+                    </div>
+                    
+                    <div class="faq-section">
+                        <h3>Frequently Asked Questions</h3>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>How much term insurance do I need?</strong></div>
+                            <div class="faq-answer">A common rule of thumb is 10-15 times your annual income, but consider your family's specific needs, outstanding debts, mortgage, children's education, and future expenses. Subtract any existing coverage and assets.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>What's the difference between term and permanent life insurance?</strong></div>
+                            <div class="faq-answer">Term insurance provides coverage for a specific period at lower costs, with no cash value. Permanent life insurance (whole life, universal life) covers you for life, builds cash value, but costs significantly more.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>Can I convert term insurance to permanent insurance?</strong></div>
+                            <div class="faq-answer">Many term policies offer a conversion option that allows you to convert to permanent insurance without a medical exam. This is valuable if your health changes during the term period.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MoneyCalcPro</h3>
+                    <p>Smart Finance & Insurance Calculators for Better Decisions</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../tools.html">Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 MoneyCalcPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

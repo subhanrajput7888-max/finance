@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Insurance Cost Estimator - MoneyCalcPro</title>
+    <meta name="description" content="Estimate your annual health insurance costs and benefits with our free health insurance calculator. Compare plans effectively.">
+    <meta name="keywords" content="health insurance calculator, health insurance cost estimator, medical insurance calculator, health plan comparison">
+    <meta name="author" content="MoneyCalcPro">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta property="og:title" content="Health Insurance Cost Estimator - MoneyCalcPro">
+    <meta property="og:description" content="Estimate your annual health insurance costs and benefits with our free health insurance calculator. Compare plans effectively.">
+    <meta property="og:type" content="webpage">
+    <meta property="og:url" content="https://moneycalcpro.com/calculators/health-insurance.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Health Insurance Cost Estimator - MoneyCalcPro">
+    <meta name="twitter:description" content="Estimate your annual health insurance costs and benefits with our free health insurance calculator. Compare plans effectively.">
+    
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Health Insurance Cost Estimator",
+        "description": "Estimate your annual health insurance costs and benefits",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://moneycalcpro.com/index.html"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculators",
+            "item": "https://moneycalcpro.com/tools.html"
+        },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Health Insurance Cost Estimator",
+            "item": "https://moneycalcpro.com/calculators/health-insurance.html"
+        }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What are the different health plan tiers?"
+        },
+        {
+            "@type": "Question",
+            "name": "What is the difference between HMO and PPO?"
+        },
+        {
+            "@type": "Question",
+            "name": "What is the open enrollment period?"
+        }]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>MoneyCalcPro</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../tools.html">Tools</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Health Insurance Cost Estimator</h1>
+                <p>Estimate your annual health insurance costs and benefits</p>
+            </div>
+        </section>
+
+        <section class="calculator-page">
+            <div class="container">
+                <div class="calculator-container">
+                    <form id="healthInsuranceForm" class="calculator-form">
+                        <div class="input-group">
+                            <label for="healthAge">Age</label>
+                            <input type="number" id="healthAge" name="healthAge" min="18" max="65" step="1" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="healthIncome">Annual Income ($)</label>
+                            <input type="number" id="healthIncome" name="healthIncome" min="10000" max="1000000" step="1000" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="tobacco">Tobacco Use</label>
+                            <select id="tobacco" name="tobacco" required>
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="region">Geographic Region</label>
+                            <select id="region" name="region" required>
+                                <option value="average">Average Cost Area</option>
+                                <option value="high-cost">High Cost Area</option>
+                                <option value="low-cost">Low Cost Area</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Estimate Costs</button>
+                    </form>
+                    
+                    <div class="result-container">
+                        <h3>Health Insurance Cost Estimate</h3>
+                        <div id="healthInsuranceResult">
+                            <p>Enter your details to see the cost estimate</p>
+                        </div>
+                    </div>
+                    
+                    <div class="explanation">
+                        <h3>How the Health Insurance Cost Estimator Works</h3>
+                        <p>Health insurance premiums are influenced by several factors:</p>
+                        <ul>
+                            <li>Age (older individuals typically pay higher premiums)</li>
+                            <li>Geographic location (costs vary by region)</li>
+                            <li>Tobacco use (smokers pay higher premiums)</li>
+                            <li>Plan tier (Bronze, Silver, Gold, Platinum)</li>
+                            <li>Family size (more members increase costs)</li>
+                        </ul>
+                        <p>Under the Affordable Care Act (ACA), premium subsidies may be available based on income. The calculator provides estimates based on average costs for different tiers of coverage.</p>
+                    </div>
+                    
+                    <div class="faq-section">
+                        <h3>Frequently Asked Questions</h3>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>What are the different health plan tiers?</strong></div>
+                            <div class="faq-answer">Plans are categorized into four tiers: Bronze (40% insurer pays, 60% you pay), Silver (70/30), Gold (80/20), and Platinum (90/10). Higher-tier plans have higher premiums but lower out-of-pocket costs.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>What is the difference between HMO and PPO?</strong></div>
+                            <div class="faq-answer">HMOs require referrals to see specialists and primarily use in-network providers. PPOs offer more flexibility to see out-of-network providers but at higher costs. EPOs and HDHPs are other common plan types.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>What is the open enrollment period?</strong></div>
+                            <div class="faq-answer">Open enrollment typically runs from November 1 to January 15, during which you can enroll in or change health insurance plans. Special enrollment periods are available for qualifying life events like marriage, birth, or job loss.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MoneyCalcPro</h3>
+                    <p>Smart Finance & Insurance Calculators for Better Decisions</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../tools.html">Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 MoneyCalcPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>
