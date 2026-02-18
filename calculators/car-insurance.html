@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Insurance Premium Calculator - MoneyCalcPro</title>
+    <meta name="description" content="Calculate your car insurance premium based on vehicle and driver factors with our free car insurance calculator. Save on insurance costs.">
+    <meta name="keywords" content="car insurance calculator, auto insurance calculator, car insurance premium calculator, vehicle insurance">
+    <meta name="author" content="MoneyCalcPro">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta property="og:title" content="Car Insurance Premium Calculator - MoneyCalcPro">
+    <meta property="og:description" content="Calculate your car insurance premium based on vehicle and driver factors with our free car insurance calculator. Save on insurance costs.">
+    <meta property="og:type" content="webpage">
+    <meta property="og:url" content="https://moneycalcpro.site/calculators/car-insurance.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Car Insurance Premium Calculator - MoneyCalcPro">
+    <meta name="twitter:description" content="Calculate your car insurance premium based on vehicle and driver factors with our free car insurance calculator. Save on insurance costs.">
+    
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Car Insurance Premium Calculator",
+        "description": "Calculate your car insurance premium based on vehicle and driver factors",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://moneycalcpro.site/index.html"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculators",
+            "item": "https://moneycalcpro.site/tools.html"
+        },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Car Insurance Premium Calculator",
+            "item": "https://moneycalcpro.site/calculators/car-insurance.html"
+        }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is the difference between liability and comprehensive coverage?"
+        },
+        {
+            "@type": "Question",
+            "name": "How can I lower my car insurance premium?"
+        },
+        {
+            "@type": "Question",
+            "name": "When should I drop full coverage on my car?"
+        }]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>MoneyCalcPro</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../tools.html">Tools</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Car Insurance Premium Calculator</h1>
+                <p>Calculate your car insurance premium based on vehicle and driver factors</p>
+            </div>
+        </section>
+
+        <section class="calculator-page">
+            <div class="container">
+                <div class="calculator-container">
+                    <form id="carInsuranceForm" class="calculator-form">
+                        <div class="input-group">
+                            <label for="driverAge">Driver Age</label>
+                            <input type="number" id="driverAge" name="driverAge" min="16" max="100" step="1" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="vehicleValue">Vehicle Value ($)</label>
+                            <input type="number" id="vehicleValue" name="vehicleValue" min="1000" max="200000" step="1000" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="vehicleAge">Vehicle Age (years)</label>
+                            <input type="number" id="vehicleAge" name="vehicleAge" min="0" max="30" step="1" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="coverageType">Coverage Type</label>
+                            <select id="coverageType" name="coverageType" required>
+                                <option value="basic">Basic (Liability Only)</option>
+                                <option value="collision">Collision + Liability</option>
+                                <option value="comprehensive" selected>Comprehensive + Collision</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Calculate Premium</button>
+                    </form>
+                    
+                    <div class="result-container">
+                        <h3>Car Insurance Premium Estimate</h3>
+                        <div id="carInsuranceResult">
+                            <p>Enter your details to see the premium estimate</p>
+                        </div>
+                    </div>
+                    
+                    <div class="explanation">
+                        <h3>How the Car Insurance Premium Calculator Works</h3>
+                        <p>Car insurance premiums are calculated based on numerous factors that insurers use to assess risk:</p>
+                        <ul>
+                            <li>Driver age and driving record (younger drivers pay more)</li>
+                            <li>Vehicle value and type (expensive cars cost more to insure)</li>
+                            <li>Location (urban areas typically have higher rates)</li>
+                            <li>Coverage type and limits (more coverage costs more)</li>
+                            <li>Credit score (in most states)</li>
+                            <li>Annual mileage (higher usage increases risk)</li>
+                        </ul>
+                        <p>These estimates provide a general idea of costs. Actual premiums may vary based on specific insurer calculations and available discounts.</p>
+                    </div>
+                    
+                    <div class="faq-section">
+                        <h3>Frequently Asked Questions</h3>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>What is the difference between liability and comprehensive coverage?</strong></div>
+                            <div class="faq-answer">Liability insurance covers damage you cause to others, while comprehensive covers theft, vandalism, and natural disasters. Collision covers accidents with other vehicles or objects. Full coverage typically includes all three.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>How can I lower my car insurance premium?</strong></div>
+                            <div class="faq-answer">Ways to save include: raising deductibles, maintaining a good driving record, bundling with other insurance, using telematics programs, qualifying for discounts (safe driver, good student, etc.), and comparing quotes from multiple insurers.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>When should I drop full coverage on my car?</strong></div>
+                            <div class="faq-answer">Consider dropping full coverage when your car's value is less than 10 times your annual premium. If your car is older and not financed, you might save more by self-insuring for repairs rather than paying for comprehensive/collision coverage.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MoneyCalcPro</h3>
+                    <p>Smart Finance & Insurance Calculators for Better Decisions</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../tools.html">Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 MoneyCalcPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

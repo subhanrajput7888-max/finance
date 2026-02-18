@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator - MoneyCalcPro</title>
+    <meta name="description" content="Calculate compound interest on your investments with our free calculator. See how your money grows with compound interest over time.">
+    <meta name="keywords" content="compound interest calculator, interest calculator, investment growth calculator, compound interest formula">
+    <meta name="author" content="MoneyCalcPro">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta property="og:title" content="Compound Interest Calculator - MoneyCalcPro">
+    <meta property="og:description" content="Calculate compound interest on your investments with our free calculator. See how your money grows with compound interest over time.">
+    <meta property="og:type" content="webpage">
+    <meta property="og.url" content="https://moneycalcpro.site/calculators/compound-interest.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Compound Interest Calculator - MoneyCalcPro">
+    <meta name="twitter:description" content="Calculate compound interest on your investments with our free calculator. See how your money grows with compound interest over time.">
+    
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Compound Interest Calculator",
+        "description": "Calculate compound interest on your investments",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://moneycalcpro.site/index.html"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculators",
+            "item": "https://moneycalcpro.site/tools.html"
+        },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Compound Interest Calculator",
+            "item": "https://moneycalcpro.site/calculators/compound-interest.html"
+        }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is compound interest?"
+        },
+        {
+            "@type": "Question",
+            "name": "How does compounding frequency affect returns?"
+        },
+        {
+            "@type": "Question",
+            "name": "Why is compound interest important?"
+        }]
+    }
+    </script>
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html"><img src="../images/logo.png" alt="MoneyCalcPro Logo" width="150" height="40"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../tools.html">Tools</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Compound Interest Calculator</h1>
+                <p>See how your money grows with compound interest over time</p>
+            </div>
+        </section>
+
+        <section class="calculator-page">
+            <div class="container">
+                <div class="calculator-container">
+                    <form id="compoundInterestForm" class="calculator-form">
+                        <div class="input-group">
+                            <label for="ciPrincipal">Principal Amount ($)</label>
+                            <input type="number" id="ciPrincipal" name="ciPrincipal" min="100" max="10000000" step="100" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="ciRate">Annual Interest Rate (%)</label>
+                            <input type="number" id="ciRate" name="ciRate" min="0.1" max="50" step="0.1" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="ciYears">Time Period (Years)</label>
+                            <input type="number" id="ciYears" name="ciYears" min="1" max="50" step="1" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="ciFrequency">Compounding Frequency Per Year</label>
+                            <select id="ciFrequency" name="ciFrequency" required>
+                                <option value="1">Annually</option>
+                                <option value="2">Semi-annually</option>
+                                <option value="4">Quarterly</option>
+                                <option value="12" selected>Monthly</option>
+                                <option value="365">Daily</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Calculate Compound Interest</button>
+                    </form>
+                    
+                    <div class="result-container">
+                        <h3>Compound Interest Results</h3>
+                        <div id="compoundInterestResult">
+                            <p>Enter your investment details to see the results</p>
+                        </div>
+                    </div>
+                    
+                    <div class="explanation">
+                        <h3>How the Compound Interest Calculator Works</h3>
+                        <p>Compound interest is calculated using the formula:</p>
+                        <p>A = P(1 + r/n)^(nt)</p>
+                        <p>Where:</p>
+                        <ul>
+                            <li>A = Final amount</li>
+                            <li>P = Principal amount (initial investment)</li>
+                            <li>r = Annual interest rate (in decimal)</li>
+                            <li>n = Number of times interest is compounded per year</li>
+                            <li>t = Time the money is invested for (in years)</li>
+                        </ul>
+                        <p>Compound interest allows your investment to grow exponentially because you earn interest not only on your original principal but also on the accumulated interest from previous periods. This is often referred to as "interest on interest."</p>
+                    </div>
+                    
+                    <div class="faq-section">
+                        <h3>Frequently Asked Questions</h3>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>What is compound interest?</strong></div>
+                            <div class="faq-answer">Compound interest is interest calculated on the initial principal and also on the accumulated interest of previous periods. It's essentially "interest on interest," which causes wealth to grow exponentially over time.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>How does compounding frequency affect returns?</strong></div>
+                            <div class="faq-answer">More frequent compounding (daily vs. annually) results in higher returns because interest is calculated and added to the principal more often. However, the difference becomes more pronounced over longer periods.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>Why is compound interest important?</strong></div>
+                            <div class="faq-answer">Albert Einstein allegedly called compound interest "the eighth wonder of the world" and "the greatest mathematical discovery of all time." Starting early and staying invested allows the power of compounding to work most effectively, turning modest investments into substantial wealth over time.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo-footer">
+                        <img src="../images/logo.png" alt="MoneyCalcPro Logo" width="120" height="32">
+                    </div>
+                    <p>Smart Finance & Insurance Calculators for Better Decisions</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../tools.html">Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 MoneyCalcPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('compoundInterestForm');
+            
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    calculateCompoundInterest();
+                });
+            }
+            
+            function calculateCompoundInterest() {
+                // Get input values
+                const principal = parseFloat(document.getElementById('ciPrincipal').value);
+                const annualRate = parseFloat(document.getElementById('ciRate').value);
+                const timesCompounded = parseInt(document.getElementById('ciFrequency').value);
+                const years = parseInt(document.getElementById('ciYears').value);
+                
+                if (isNaN(principal) || isNaN(annualRate) || isNaN(timesCompounded) || isNaN(years) || 
+                    principal <= 0 || annualRate < 0 || timesCompounded <= 0 || years <= 0) {
+                    document.getElementById('compoundInterestResult').innerHTML = '<p style="color: red;">Please enter valid numbers in all fields.</p>';
+                    return;
+                }
+                
+                // Calculate compound interest: A = P(1 + r/n)^(nt)
+                const rate = annualRate / 100;
+                const amount = principal * Math.pow(1 + rate/timesCompounded, timesCompounded * years);
+                const interest = amount - principal;
+                
+                // Calculate APY
+                const APY = (Math.pow(1 + rate/timesCompounded, timesCompounded) - 1) * 100;
+                
+                // Display results
+                document.getElementById('compoundInterestResult').innerHTML = `
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <h4>Final Amount</h4>
+                            <p class="result-value">$${amount.toFixed(2)}</p>
+                        </div>
+                        <div class="result-item">
+                            <h4>Total Interest</h4>
+                            <p class="result-value">$${interest.toFixed(2)}</p>
+                        </div>
+                        <div class="result-item">
+                            <h4>Starting Principal</h4>
+                            <p class="result-value">$${principal.toFixed(2)}</p>
+                        </div>
+                        <div class="result-item">
+                            <h4>APY</h4>
+                            <p class="result-value">${APY.toFixed(2)}%</p>
+                        </div>
+                    </div>
+                    <div class="amortization-info">
+                        <p>Your investment will grow by <strong>${((interest/principal)*100).toFixed(2)}%</strong> over ${years} years.</p>
+                        <p>That's <strong>$${(interest/years).toFixed(2)}</strong> in interest per year on average.</p>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

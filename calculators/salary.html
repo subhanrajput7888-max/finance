@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="MoneyCalcPro">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <title>Salary Calculator - MoneyCalcPro</title>
+    <meta name="description" content="Calculate your net take-home salary after deductions and taxes with our free salary calculator. Understand your compensation.">
+    <meta name="keywords" content="salary calculator, take-home pay calculator, net salary calculator, gross to net calculator">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Salary Calculator - MoneyCalcPro">
+    <meta property="og:description" content="Calculate your net take-home salary after deductions and taxes with our free salary calculator. Understand your compensation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.moneycalcpro.com/calculators/salary.html">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Salary Calculator - MoneyCalcPro">
+    <meta name="twitter:description" content="Calculate your net take-home salary after deductions and taxes with our free salary calculator. Understand your compensation.">
+    
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Salary Calculator",
+        "description": "Calculate your net take-home salary after deductions and taxes",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.moneycalcpro.com"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculators",
+            "item": "https://www.moneycalcpro.com/tools.html"
+        },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Salary Calculator",
+            "item": "https://www.moneycalcpro.com/calculators/salary.html"
+        }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What's the difference between gross and net salary?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Gross salary is your total compensation before any deductions. Net salary (take-home pay) is what you actually receive after taxes and other deductions. The difference can be substantial depending on your income level and location."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are common payroll deductions?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Common deductions include federal income tax, Social Security tax (6.2%), Medicare tax (1.45%), state income tax, local taxes, retirement contributions (401k), health insurance premiums, life insurance, and other voluntary deductions."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I increase my take-home pay?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Strategies include contributing to pre-tax accounts (401k, HSA), flexible spending accounts, adjusting withholding allowances, relocating to a state with no income tax, and negotiating a higher salary. Consult a tax advisor for personalized advice."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>MoneyCalcPro</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../tools.html">Tools</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Salary Calculator</h1>
+                <p>Calculate your net take-home salary after deductions and taxes</p>
+            </div>
+        </section>
+
+        <section class="calculator-page">
+            <div class="container">
+                <div class="calculator-container">
+                    <form id="salaryForm" class="calculator-form">
+                        <div class="input-group">
+                            <label for="annualSalary">Annual Gross Salary ($)</label>
+                            <input type="number" id="annualSalary" name="annualSalary" min="10000" max="10000000" step="1000" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="bonus">Annual Bonus ($)</label>
+                            <input type="number" id="bonus" name="bonus" min="0" max="1000000" step="100" placeholder="Optional">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Calculate Take-Home Pay</button>
+                    </form>
+                    
+                    <div class="result-container">
+                        <h3>Salary Breakdown</h3>
+                        <div id="salaryResult">
+                            <p>Enter your salary details to see the breakdown</p>
+                        </div>
+                    </div>
+                    
+                    <div class="explanation">
+                        <h3>How the Salary Calculator Works</h3>
+                        <p>This calculator estimates your take-home pay by subtracting common deductions from your gross salary:</p>
+                        <ul>
+                            <li>Social Security tax (6.2% of gross pay up to the wage base limit)</li>
+                            <li>Medicare tax (1.45% of all wages, plus 0.9% additional Medicare tax on wages over $200,000)</li>
+                            <li>Federal income tax (based on current tax brackets)</li>
+                            <li>State income tax (varies by state, average estimated at 5%)</li>
+                            <li>Other common deductions like retirement contributions</li>
+                        </ul>
+                        <p>Note: This is an estimate only. Actual deductions may vary based on your location, tax filing status, number of allowances, and other factors. Consult a tax professional for accurate calculations.</p>
+                    </div>
+                    
+                    <div class="faq-section">
+                        <h3>Frequently Asked Questions</h3>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>What's the difference between gross and net salary?</strong></div>
+                            <div class="faq-answer">Gross salary is your total compensation before any deductions. Net salary (take-home pay) is what you actually receive after taxes and other deductions. The difference can be substantial depending on your income level and location.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>What are common payroll deductions?</strong></div>
+                            <div class="faq-answer">Common deductions include federal income tax, Social Security tax (6.2%), Medicare tax (1.45%), state income tax, local taxes, retirement contributions (401k), health insurance premiums, life insurance, and other voluntary deductions.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>How can I increase my take-home pay?</strong></div>
+                            <div class="faq-answer">Strategies include contributing to pre-tax accounts (401k, HSA), flexible spending accounts, adjusting withholding allowances, relocating to a state with no income tax, and negotiating a higher salary. Consult a tax advisor for personalized advice.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MoneyCalcPro</h3>
+                    <p>Smart Finance & Insurance Calculators for Better Decisions</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../tools.html">Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 MoneyCalcPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

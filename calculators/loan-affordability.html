@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Affordability Calculator - MoneyCalcPro</title>
+    <meta name="description" content="Calculate how much loan you can afford based on your income with our free loan affordability calculator.">
+    <meta name="keywords" content="loan affordability calculator, how much loan can I get, loan eligibility calculator, debt affordability">
+    <meta name="author" content="MoneyCalcPro">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta property="og:title" content="Loan Affordability Calculator - MoneyCalcPro">
+    <meta property="og:description" content="Calculate how much loan you can afford based on your income with our free loan affordability calculator.">
+    <meta property="og:type" content="webpage">
+    <meta property="og:url" content="https://moneycalcpro.com/calculators/loan-affordability.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Loan Affordability Calculator - MoneyCalcPro">
+    <meta name="twitter:description" content="Calculate how much loan you can afford based on your income with our free loan affordability calculator.">
+    
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Loan Affordability Calculator",
+        "description": "Calculate how much loan you can afford based on your income",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://moneycalcpro.com/index.html"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculators",
+            "item": "https://moneycalcpro.com/tools.html"
+        },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Loan Affordability Calculator",
+            "item": "https://moneycalcpro.com/calculators/loan-affordability.html"
+        }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is the debt-to-income ratio?"
+        },
+        {
+            "@type": "Question",
+            "name": "How do lenders determine loan eligibility?"
+        },
+        {
+            "@type": "Question",
+            "name": "What if I can't afford the loan I want?"
+        }]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>MoneyCalcPro</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../tools.html">Tools</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Loan Affordability Calculator</h1>
+                <p>Determine how much loan you can afford based on your income</p>
+            </div>
+        </section>
+
+        <section class="calculator-page">
+            <div class="container">
+                <div class="calculator-container">
+                    <form id="loanAffordabilityForm" class="calculator-form">
+                        <div class="input-group">
+                            <label for="monthlyIncome">Monthly Gross Income ($)</label>
+                            <input type="number" id="monthlyIncome" name="monthlyIncome" min="500" max="1000000" step="100" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="monthlyDebt">Monthly Debt Payments ($)</label>
+                            <input type="number" id="monthlyDebt" name="monthlyDebt" min="0" max="100000" step="10" placeholder="Include credit cards, car loans, etc.">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="affordabilityRate">Interest Rate (% per annum)</label>
+                            <input type="number" id="affordabilityRate" name="affordabilityRate" min="1" max="20" step="0.1" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="affordabilityMonths">Loan Term (months)</label>
+                            <input type="number" id="affordabilityMonths" name="affordabilityMonths" min="12" max="360" step="1" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Calculate Loan Affordability</button>
+                    </form>
+                    
+                    <div class="result-container">
+                        <h3>Loan Affordability Analysis</h3>
+                        <div id="affordabilityResult">
+                            <p>Enter your financial details to see the affordability analysis</p>
+                        </div>
+                    </div>
+                    
+                    <div class="explanation">
+                        <h3>How the Loan Affordability Calculator Works</h3>
+                        <p>This calculator determines the maximum loan amount you can afford based on your income and existing debts. Lenders typically follow the 28/36 rule:</p>
+                        <ul>
+                            <li>28% rule: Housing expenses should not exceed 28% of gross monthly income</li>
+                            <li>36% rule: Total debt payments should not exceed 36% of gross monthly income</li>
+                        </ul>
+                        <p>The calculator estimates the maximum monthly payment you can afford, then calculates the corresponding loan amount based on the interest rate and term you specify.</p>
+                    </div>
+                    
+                    <div class="faq-section">
+                        <h3>Frequently Asked Questions</h3>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>What is the debt-to-income ratio?</strong></div>
+                            <div class="faq-answer">The debt-to-income (DTI) ratio is your monthly debt payments divided by your monthly gross income. Lenders typically prefer a DTI of 36% or less, with no more than 28% going toward housing expenses.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>How do lenders determine loan eligibility?</strong></div>
+                            <div class="faq-answer">Lenders consider your credit score, debt-to-income ratio, employment history, and down payment amount. A higher credit score and lower DTI ratio improve your chances of loan approval and better interest rates.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>What if I can't afford the loan I want?</strong></div>
+                            <div class="faq-answer">Consider options like increasing your down payment, extending the loan term, improving your credit score, or adjusting your desired loan amount. You might also explore different lenders or loan programs with more favorable terms.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MoneyCalcPro</h3>
+                    <p>Smart Finance & Insurance Calculators for Better Decisions</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../tools.html">Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 MoneyCalcPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

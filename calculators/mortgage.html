@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator - MoneyCalcPro</title>
+    <meta name="description" content="Calculate your monthly mortgage payments and total loan costs with our free mortgage calculator. Includes property tax and insurance estimates.">
+    <meta name="keywords" content="mortgage calculator, home loan calculator, mortgage payment calculator, home buying calculator">
+    <meta name="author" content="MoneyCalcPro">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta property="og:title" content="Mortgage Calculator - MoneyCalcPro">
+    <meta property="og:description" content="Calculate your monthly mortgage payments and total loan costs with our free mortgage calculator. Includes property tax and insurance estimates.">
+    <meta property="og:type" content="webpage">
+    <meta property="og:url" content="https://moneycalcpro.site/calculators/mortgage.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mortgage Calculator - MoneyCalcPro">
+    <meta name="twitter:description" content="Calculate your monthly mortgage payments and total loan costs with our free mortgage calculator. Includes property tax and insurance estimates.">
+    
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Mortgage Calculator",
+        "description": "Calculate your monthly mortgage payments and total loan costs",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://moneycalcpro.site/index.html"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculators",
+            "item": "https://moneycalcpro.site/tools.html"
+        },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Mortgage Calculator",
+            "item": "https://moneycalcpro.site/calculators/mortgage.html"
+        }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is a good down payment percentage?"
+        },
+        {
+            "@type": "Question",
+            "name": "How does loan term affect my mortgage?"
+        },
+        {
+            "@type": "Question",
+            "name": "What is PMI and when is it required?"
+        }]
+    }
+    </script>
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html"><img src="../images/logo.png" alt="MoneyCalcPro Logo" width="150" height="40"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../tools.html">Tools</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Mortgage Calculator</h1>
+                <p>Estimate your monthly mortgage payments and total cost of your home loan</p>
+            </div>
+        </section>
+
+        <section class="calculator-page">
+            <div class="container">
+                <div class="calculator-container">
+                    <form id="mortgageForm" class="calculator-form">
+                        <div class="input-group">
+                            <label for="homePrice">Home Price ($)</label>
+                            <input type="number" id="homePrice" name="homePrice" min="50000" max="10000000" step="1000" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="downPayment">Down Payment ($)</label>
+                            <input type="number" id="downPayment" name="downPayment" min="0" max="10000000" step="1000" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="interestRate">Interest Rate (% per annum)</label>
+                            <input type="number" id="interestRate" name="interestRate" min="1" max="20" step="0.1" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="loanTerm">Loan Term (years)</label>
+                            <input type="number" id="loanTerm" name="loanTerm" min="5" max="30" step="1" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Calculate Mortgage</button>
+                    </form>
+                    
+                    <div class="result-container">
+                        <h3>Mortgage Summary</h3>
+                        <div id="mortgageResult">
+                            <p>Enter your mortgage details to see the results</p>
+                        </div>
+                    </div>
+                    
+                    <div class="explanation">
+                        <h3>How the Mortgage Calculator Works</h3>
+                        <p>The monthly mortgage payment is calculated using the formula:</p>
+                        <p>M = P[r(1+r)^n]/[(1+r)^n-1]</p>
+                        <p>Where:</p>
+                        <ul>
+                            <li>M = Monthly payment</li>
+                            <li>P = Loan principal (home price minus down payment)</li>
+                            <li>r = Monthly interest rate (annual rate divided by 12 and 100)</li>
+                            <li>n = Total number of payments (loan term in years multiplied by 12)</li>
+                        </ul>
+                        <p>Note: This calculator provides an estimate of principal and interest only. Actual monthly payments may also include property taxes, homeowners insurance, and private mortgage insurance (PMI).</p>
+                    </div>
+                    
+                    <div class="faq-section">
+                        <h3>Frequently Asked Questions</h3>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>What is a good down payment percentage?</strong></div>
+                            <div class="faq-answer">A down payment of 20% is traditionally considered ideal as it avoids private mortgage insurance (PMI). However, many programs allow for lower down payments, sometimes as low as 3% to 5%.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>How does loan term affect my mortgage?</strong></div>
+                            <div class="faq-answer">Shorter loan terms (like 15-year) typically have lower interest rates and result in paying less total interest over the life of the loan, but higher monthly payments. Longer terms (like 30-year) have lower monthly payments but higher total interest.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><strong>What is PMI and when is it required?</strong></div>
+                            <div class="faq-answer">Private Mortgage Insurance (PMI) is typically required when your down payment is less than 20% of the home's purchase price. PMI protects the lender if you default on the loan and can usually be canceled once your equity reaches 20%.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo-footer">
+                        <img src="../images/logo.png" alt="MoneyCalcPro Logo" width="120" height="32">
+                    </div>
+                    <p>Smart Finance & Insurance Calculators for Better Decisions</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><strong>Rana Subhan</strong></p>
+                    <p>Phone: 03157845223</p>
+                    <p>Email: subhanrajput3222@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../tools.html">Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 MoneyCalcPro. All rights reserved. | Owner: Rana Subhan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('mortgageForm');
+            
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    calculateMortgage();
+                });
+            }
+            
+            function calculateMortgage() {
+                // Get input values
+                const homePrice = parseFloat(document.getElementById('homePrice').value);
+                const downPaymentAmount = parseFloat(document.getElementById('downPayment').value);
+                const loanTerm = parseInt(document.getElementById('loanTerm').value);
+                const interestRate = parseFloat(document.getElementById('interestRate').value);
+                
+                if (isNaN(homePrice) || isNaN(downPaymentAmount) || isNaN(loanTerm) || isNaN(interestRate) || 
+                    homePrice <= 0 || downPaymentAmount < 0 || loanTerm <= 0 || interestRate < 0 || downPaymentAmount > homePrice) {
+                    document.getElementById('mortgageResult').innerHTML = '<p style="color: red;">Please enter valid numbers in all fields. Down payment cannot exceed home price.</p>';
+                    return;
+                }
+                
+                // Calculate loan amount
+                const loanAmount = homePrice - downPaymentAmount;
+                
+                // Calculate monthly interest rate and total months
+                const monthlyRate = interestRate / 100 / 12;
+                const totalMonths = loanTerm * 12;
+                
+                // Calculate monthly payment using mortgage formula
+                const monthlyPayment = loanAmount * monthlyRate * Math.pow(1 + monthlyRate, totalMonths) / (Math.pow(1 + monthlyRate, totalMonths) - 1);
+                
+                // Calculate total payment and interest
+                const totalPayment = monthlyPayment * totalMonths;
+                const totalInterest = totalPayment - loanAmount;
+                
+                // Display results
+                document.getElementById('mortgageResult').innerHTML = `
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <h4>Monthly Payment</h4>
+                            <p class="result-value">$${monthlyPayment.toFixed(2)}</p>
+                        </div>
+                        <div class="result-item">
+                            <h4>Down Payment</h4>
+                            <p class="result-value">$${downPaymentAmount.toFixed(2)}</p>
+                        </div>
+                        <div class="result-item">
+                            <h4>Loan Amount</h4>
+                            <p class="result-value">$${loanAmount.toFixed(2)}</p>
+                        </div>
+                        <div class="result-item">
+                            <h4>Total Interest</h4>
+                            <p class="result-value">$${totalInterest.toFixed(2)}</p>
+                        </div>
+                    </div>
+                    <div class="amortization-info">
+                        <p>You will pay <strong>$${totalInterest.toFixed(2)}</strong> in interest over the life of the loan.</p>
+                        <p>That's <strong>${((totalInterest/(homePrice))*100).toFixed(2)}%</strong> of the home price.</p>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
