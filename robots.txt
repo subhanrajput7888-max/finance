@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /cgi-bin/
-Disallow: /tmp/
-Disallow: /private/
-
-Sitemap: https://moneycalcpro.com/sitemap.xml
