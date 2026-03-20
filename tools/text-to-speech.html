@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech - Free Online TTS Converter | MoneyCalcPro</title>
+    <meta name="description" content="Convert text to speech online for free. Multiple voices, adjustable speed and pitch. Works in your browser with Web Speech API.">
+    <meta name="keywords" content="text to speech, TTS, text to voice, speech synthesis, read text aloud">
+    <meta name="author" content="Muhammad Subhan">
+    <link rel="canonical" href="https://moneycalcpro.site/tools/text-to-speech.html">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Floating Logo -->
+    <a href="../index.html" class="floating-logo" aria-label="MoneyCalcPro Home">
+        <img src="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png" alt="Moneycalcpro.site Logo">
+    </a>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png" alt="Moneycalcpro.site Logo">
+                <span>MoneyCalcPro</span>
+            </a>
+            <nav class="nav-desktop">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../tools.html" class="nav-link active">Tools</a>
+                <a href="../blog.html" class="nav-link">Blog</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" onclick="ThemeManager.toggle()" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="nav-mobile-overlay"></div>
+    <nav class="nav-mobile">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../tools.html" class="nav-link active">Tools</a>
+        <a href="../blog.html" class="nav-link">Blog</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <section class="page-hero" style="padding: 7rem 0 3rem; background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);">
+        <div class="container">
+            <h1 class="page-hero-title scroll-animate"><i class="fas fa-volume-up"></i> Text to Speech</h1>
+            <p class="page-hero-subtitle scroll-animate delay-100">Convert text to natural-sounding speech. Choose from multiple voices and customize speed and pitch.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="scroll-animate">
+                <div class="tool-container">
+                    <div class="grid grid-3 mb-4" style="gap: 1rem;">
+                        <div class="form-group mb-0">
+                            <label class="form-label">Voice</label>
+                            <select id="voice-select" class="form-select">
+                                <option value="">Loading voices...</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-0">
+                            <label class="form-label">Speed: <span id="rate-value">1.0x</span></label>
+                            <input type="range" id="rate" class="slider" min="0.5" max="2" value="1" step="0.1">
+                        </div>
+                        <div class="form-group mb-0">
+                            <label class="form-label">Pitch: <span id="pitch-value">1.0</span></label>
+                            <input type="range" id="pitch" class="slider" min="0.5" max="2" value="1" step="0.1">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="flex justify-between mb-2">
+                            <label class="form-label">Enter Text to Speak</label>
+                            <button id="clear-btn" class="btn btn-ghost btn-sm">
+                                <i class="fas fa-trash"></i> Clear
+                            </button>
+                        </div>
+                        <textarea id="text-input" class="form-textarea" style="min-height: 200px;" placeholder="Enter the text you want to convert to speech..."></textarea>
+                        <div class="flex justify-between mt-1" style="font-size: 0.75rem; color: var(--text-muted);">
+                            <span id="char-count">0 characters</span>
+                            <span>Max 5000 characters</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2 mt-4" style="flex-wrap: wrap;">
+                        <button id="speak-btn" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);">
+                            <i class="fas fa-play"></i> Speak
+                        </button>
+                        <button id="pause-btn" class="btn btn-secondary btn-lg" disabled>
+                            <i class="fas fa-pause"></i> Pause
+                        </button>
+                        <button id="stop-btn" class="btn btn-ghost btn-lg" disabled>
+                            <i class="fas fa-stop"></i> Stop
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 scroll-animate">
+                <div class="card">
+                    <h3 class="mb-4">About Text to Speech</h3>
+                    <p style="margin-bottom: 1rem;">Our Text to Speech tool uses your browser's built-in speech synthesis capabilities to convert written text into natural-sounding speech. This tool is perfect for proofreading, accessibility, language learning, and creating audio content.</p>
+                    <div class="grid grid-2">
+                        <div>
+                            <h4 class="mb-2">Features:</h4>
+                            <ul style="padding-left: 1.5rem; color: var(--text-secondary);">
+                                <li style="margin-bottom: 0.5rem;">Multiple voice options</li>
+                                <li style="margin-bottom: 0.5rem;">Adjustable speech rate</li>
+                                <li style="margin-bottom: 0.5rem;">Pitch control</li>
+                                <li>Play, pause, and stop controls</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="mb-2">Use Cases:</h4>
+                            <ul style="padding-left: 1.5rem; color: var(--text-secondary);">
+                                <li style="margin-bottom: 0.5rem;">Proofread documents aloud</li>
+                                <li style="margin-bottom: 0.5rem;">Accessibility for visually impaired</li>
+                                <li style="margin-bottom: 0.5rem;">Language learning practice</li>
+                                <li>Content creation assistance</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-4" style="background: var(--bg-tertiary); border-radius: 8px;">
+                        <p style="margin: 0; color: var(--text-secondary);"><i class="fas fa-info-circle text-primary mr-2"></i> <strong>Note:</strong> This tool uses the Web Speech API built into your browser. Available voices and quality may vary depending on your browser and operating system.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png" alt="Moneycalcpro.site Logo">
+                        <span>MoneyCalcPro</span>
+                    </a>
+                    <p class="footer-text">Your one-stop destination for free online tools.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../tools.html">Tools</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-user mr-2"></i> Muhammad Subhan</li>
+                        <li><a href="mailto:moneycalcpro.site@gmail.com"><i class="fas fa-envelope mr-2"></i> moneycalcpro.site@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 MoneyCalcPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        const voiceSelect = document.getElementById('voice-select');
+        const rateSlider = document.getElementById('rate');
+        const rateValue = document.getElementById('rate-value');
+        const pitchSlider = document.getElementById('pitch');
+        const pitchValue = document.getElementById('pitch-value');
+        const textInput = document.getElementById('text-input');
+        const charCount = document.getElementById('char-count');
+        const speakBtn = document.getElementById('speak-btn');
+        const pauseBtn = document.getElementById('pause-btn');
+        const stopBtn = document.getElementById('stop-btn');
+        const clearBtn = document.getElementById('clear-btn');
+        
+        let voices = [];
+        let currentUtterance = null;
+        let isPaused = false;
+        
+        // Load voices
+        function loadVoices() {
+            voices = window.speechSynthesis.getVoices();
+            voiceSelect.innerHTML = voices
+                .filter(v => v.lang.startsWith('en'))
+                .map((voice, i) => `<option value="${i}">${voice.name} (${voice.lang})</option>`)
+                .join('');
+            
+            if (voices.length === 0) {
+                voiceSelect.innerHTML = '<option value="">Default System Voice</option>';
+            }
+        }
+        
+        if (window.speechSynthesis) {
+            window.speechSynthesis.onvoiceschanged = loadVoices;
+            loadVoices();
+        } else {
+            Toast.error('Text to Speech is not supported in your browser');
+            speakBtn.disabled = true;
+        }
+        
+        rateSlider.addEventListener('input', () => {
+            rateValue.textContent = rateSlider.value + 'x';
+        });
+        
+        pitchSlider.addEventListener('input', () => {
+            pitchValue.textContent = pitchSlider.value;
+        });
+        
+        textInput.addEventListener('input', () => {
+            const len = textInput.value.length;
+            charCount.textContent = len + ' characters';
+            if (len > 5000) {
+                textInput.value = textInput.value.substring(0, 5000);
+                charCount.textContent = '5000 characters';
+            }
+        });
+        
+        clearBtn.addEventListener('click', () => {
+            textInput.value = '';
+            charCount.textContent = '0 characters';
+        });
+        
+        speakBtn.addEventListener('click', () => {
+            const text = textInput.value.trim();
+            if (!text) {
+                Toast.error('Please enter some text to speak');
+                return;
+            }
+            
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.cancel();
+            }
+            
+            currentUtterance = new SpeechSynthesisUtterance(text);
+            
+            const selectedVoice = voiceSelect.value;
+            if (selectedVoice && voices[selectedVoice]) {
+                currentUtterance.voice = voices[selectedVoice];
+            }
+            
+            currentUtterance.rate = parseFloat(rateSlider.value);
+            currentUtterance.pitch = parseFloat(pitchSlider.value);
+            
+            currentUtterance.onstart = () => {
+                speakBtn.disabled = true;
+                pauseBtn.disabled = false;
+                stopBtn.disabled = false;
+                isPaused = false;
+                pauseBtn.innerHTML = '<i class="fas fa-pause"></i> Pause';
+            };
+            
+            currentUtterance.onend = () => {
+                speakBtn.disabled = false;
+                pauseBtn.disabled = true;
+                stopBtn.disabled = true;
+                isPaused = false;
+            };
+            
+            currentUtterance.onerror = (e) => {
+                console.error('Speech synthesis error:', e);
+                speakBtn.disabled = false;
+                pauseBtn.disabled = true;
+                stopBtn.disabled = true;
+            };
+            
+            window.speechSynthesis.speak(currentUtterance);
+        });
+        
+        pauseBtn.addEventListener('click', () => {
+            if (isPaused) {
+                window.speechSynthesis.resume();
+                pauseBtn.innerHTML = '<i class="fas fa-pause"></i> Pause';
+                isPaused = false;
+            } else {
+                window.speechSynthesis.pause();
+                pauseBtn.innerHTML = '<i class="fas fa-play"></i> Resume';
+                isPaused = true;
+            }
+        });
+        
+        stopBtn.addEventListener('click', () => {
+            window.speechSynthesis.cancel();
+            speakBtn.disabled = false;
+            pauseBtn.disabled = true;
+            stopBtn.disabled = true;
+            isPaused = false;
+            pauseBtn.innerHTML = '<i class="fas fa-pause"></i> Pause';
+        });
+    </script>
+</body>
+</html>

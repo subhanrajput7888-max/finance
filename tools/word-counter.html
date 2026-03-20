@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter - Count Words, Characters & More | MoneyCalcPro</title>
+    <meta name="description" content="Free online word counter tool. Count words, characters, sentences, paragraphs. Get reading time estimates and keyword density analysis.">
+    <meta name="keywords" content="word counter, character count, word count tool, text analyzer, reading time calculator">
+    <meta name="author" content="Muhammad Subhan">
+    <link rel="canonical" href="https://moneycalcpro.site/tools/word-counter.html">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Floating Logo -->
+    <a href="../index.html" class="floating-logo" aria-label="MoneyCalcPro Home">
+        <img src="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png" alt="Moneycalcpro.site Logo">
+    </a>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png" alt="Moneycalcpro.site Logo">
+                <span>MoneyCalcPro</span>
+            </a>
+            <nav class="nav-desktop">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../tools.html" class="nav-link active">Tools</a>
+                <a href="../blog.html" class="nav-link">Blog</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" onclick="ThemeManager.toggle()" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="nav-mobile-overlay"></div>
+    <nav class="nav-mobile">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../tools.html" class="nav-link active">Tools</a>
+        <a href="../blog.html" class="nav-link">Blog</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <section class="page-hero" style="padding: 7rem 0 3rem; background: linear-gradient(135deg, #EC4899 0%, #DB2777 100%);">
+        <div class="container">
+            <h1 class="page-hero-title scroll-animate"><i class="fas fa-font"></i> Word Counter</h1>
+            <p class="page-hero-subtitle scroll-animate delay-100">Count words, characters, sentences, and paragraphs. Get reading time and keyword density analysis.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="scroll-animate">
+                <div class="tool-container">
+                    <!-- Stats Cards -->
+                    <div class="grid grid-5 mb-4" style="gap: 1rem;">
+                        <div class="card text-center" style="background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%); color: white; border: none;">
+                            <div style="font-size: 2rem; font-weight: 800;" id="word-count">0</div>
+                            <div style="font-size: 0.875rem; opacity: 0.9;">Words</div>
+                        </div>
+                        <div class="card text-center" style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); color: white; border: none;">
+                            <div style="font-size: 2rem; font-weight: 800;" id="char-count">0</div>
+                            <div style="font-size: 0.875rem; opacity: 0.9;">Characters</div>
+                        </div>
+                        <div class="card text-center" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: white; border: none;">
+                            <div style="font-size: 2rem; font-weight: 800;" id="char-no-spaces">0</div>
+                            <div style="font-size: 0.875rem; opacity: 0.9;">No Spaces</div>
+                        </div>
+                        <div class="card text-center" style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); color: white; border: none;">
+                            <div style="font-size: 2rem; font-weight: 800;" id="sentence-count">0</div>
+                            <div style="font-size: 0.875rem; opacity: 0.9;">Sentences</div>
+                        </div>
+                        <div class="card text-center" style="background: linear-gradient(135deg, #EC4899 0%, #DB2777 100%); color: white; border: none;">
+                            <div style="font-size: 2rem; font-weight: 800;" id="paragraph-count">0</div>
+                            <div style="font-size: 0.875rem; opacity: 0.9;">Paragraphs</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Reading Time -->
+                    <div class="card mb-4" style="background: var(--bg-tertiary);">
+                        <div class="flex justify-between" style="flex-wrap: wrap; gap: 1rem;">
+                            <div><i class="fas fa-clock text-primary mr-2"></i> Reading Time: <strong id="reading-time">0 min</strong></div>
+                            <div><i class="fas fa-microphone text-primary mr-2"></i> Speaking Time: <strong id="speaking-time">0 min</strong></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Text Input -->
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-2">
+                            <label class="form-label">Enter or paste your text</label>
+                            <button id="clear-btn" class="btn btn-ghost btn-sm">
+                                <i class="fas fa-trash"></i> Clear
+                            </button>
+                        </div>
+                        <textarea id="text-input" class="form-textarea" style="min-height: 300px; font-family: inherit;" placeholder="Start typing or paste your text here..."></textarea>
+                    </div>
+                    
+                    <!-- Keyword Density -->
+                    <div id="keyword-section" style="display: none;">
+                        <h4 class="mb-3"><i class="fas fa-chart-bar text-primary"></i> Keyword Density</h4>
+                        <div id="keyword-list" style="max-height: 200px; overflow-y: auto;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 scroll-animate">
+                <div class="card">
+                    <h3 class="mb-4">About Word Counter</h3>
+                    <p style="margin-bottom: 1rem;">Our Word Counter is a comprehensive text analysis tool that provides detailed statistics about your writing. Whether you're a student working on an essay, a blogger optimizing content, or a professional writer meeting word count requirements, this tool has everything you need.</p>
+                    <div class="grid grid-2">
+                        <div>
+                            <h4 class="mb-2">Features:</h4>
+                            <ul style="padding-left: 1.5rem; color: var(--text-secondary);">
+                                <li style="margin-bottom: 0.5rem;">Real-time word and character counting</li>
+                                <li style="margin-bottom: 0.5rem;">Sentence and paragraph analysis</li>
+                                <li style="margin-bottom: 0.5rem;">Reading and speaking time estimates</li>
+                                <li>Keyword density analysis</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="mb-2">Common Uses:</h4>
+                            <ul style="padding-left: 1.5rem; color: var(--text-secondary);">
+                                <li style="margin-bottom: 0.5rem;">Essays and academic papers</li>
+                                <li style="margin-bottom: 0.5rem;">Blog posts and articles</li>
+                                <li style="margin-bottom: 0.5rem;">Social media content</li>
+                                <li>SEO content optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png" alt="Moneycalcpro.site Logo">
+                        <span>MoneyCalcPro</span>
+                    </a>
+                    <p class="footer-text">Your one-stop destination for free online tools.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../tools.html">Tools</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-user mr-2"></i> Muhammad Subhan</li>
+                        <li><a href="mailto:moneycalcpro.site@gmail.com"><i class="fas fa-envelope mr-2"></i> moneycalcpro.site@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 MoneyCalcPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        const textInput = document.getElementById('text-input');
+        const wordCount = document.getElementById('word-count');
+        const charCount = document.getElementById('char-count');
+        const charNoSpaces = document.getElementById('char-no-spaces');
+        const sentenceCount = document.getElementById('sentence-count');
+        const paragraphCount = document.getElementById('paragraph-count');
+        const readingTime = document.getElementById('reading-time');
+        const speakingTime = document.getElementById('speaking-time');
+        const keywordSection = document.getElementById('keyword-section');
+        const keywordList = document.getElementById('keyword-list');
+        const clearBtn = document.getElementById('clear-btn');
+        
+        const commonWords = new Set(['the', 'be', 'to', 'of', 'and', 'a', 'in', 'that', 'have', 'i', 'it', 'for', 'not', 'on', 'with', 'he', 'as', 'you', 'do', 'at', 'this', 'but', 'his', 'by', 'from', 'they', 'we', 'say', 'her', 'she', 'or', 'an', 'will', 'my', 'one', 'all', 'would', 'there', 'their', 'what', 'so', 'up', 'out', 'if', 'about', 'who', 'get', 'which', 'go', 'me', 'when', 'make', 'can', 'like', 'time', 'no', 'just', 'him', 'know', 'take', 'people', 'into', 'year', 'your', 'good', 'some', 'could', 'them', 'see', 'other', 'than', 'then', 'now', 'look', 'only', 'come', 'its', 'over', 'think', 'also', 'back', 'after', 'use', 'two', 'how', 'our', 'work', 'first', 'well', 'way', 'even', 'new', 'want', 'because', 'any', 'these', 'give', 'day', 'most', 'us']);
+        
+        textInput.addEventListener('input', updateStats);
+        clearBtn.addEventListener('click', () => {
+            textInput.value = '';
+            updateStats();
+        });
+        
+        function updateStats() {
+            const text = textInput.value;
+            
+            // Word count
+            const words = text.trim().split(/\s+/).filter(w => w.length > 0);
+            const wordNum = text.trim() === '' ? 0 : words.length;
+            wordCount.textContent = wordNum.toLocaleString();
+            
+            // Character counts
+            charCount.textContent = text.length.toLocaleString();
+            charNoSpaces.textContent = text.replace(/\s/g, '').length.toLocaleString();
+            
+            // Sentence count
+            const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+            sentenceCount.textContent = sentences.length.toLocaleString();
+            
+            // Paragraph count
+            const paragraphs = text.split(/\n\n+/).filter(p => p.trim().length > 0);
+            paragraphCount.textContent = paragraphs.length.toLocaleString() || (text.length > 0 ? 1 : 0);
+            
+            // Reading time (average 200 words per minute)
+            const readTime = Math.ceil(wordNum / 200);
+            readingTime.textContent = readTime + (readTime === 1 ? ' min' : ' mins');
+            
+            // Speaking time (average 130 words per minute)
+            const speakTime = Math.ceil(wordNum / 130);
+            speakingTime.textContent = speakTime + (speakTime === 1 ? ' min' : ' mins');
+            
+            // Keyword density
+            updateKeywordDensity(words);
+        }
+        
+        function updateKeywordDensity(words) {
+            if (words.length < 10) {
+                keywordSection.style.display = 'none';
+                return;
+            }
+            
+            const frequency = {};
+            words.forEach(word => {
+                const clean = word.toLowerCase().replace(/[^a-z0-9]/g, '');
+                if (clean.length > 2 && !commonWords.has(clean)) {
+                    frequency[clean] = (frequency[clean] || 0) + 1;
+                }
+            });
+            
+            const sorted = Object.entries(frequency)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 10);
+            
+            if (sorted.length === 0) {
+                keywordSection.style.display = 'none';
+                return;
+            }
+            
+            keywordSection.style.display = 'block';
+            keywordList.innerHTML = sorted.map(([word, count]) => {
+                const percentage = ((count / words.length) * 100).toFixed(1);
+                return `
+                    <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                        <span style="width: 120px; font-weight: 500;">${word}</span>
+                        <div style="flex: 1; height: 20px; background: var(--bg-tertiary); border-radius: 10px; overflow: hidden; margin: 0 1rem;">
+                            <div style="height: 100%; width: ${percentage}%; background: var(--primary); border-radius: 10px;"></div>
+                        </div>
+                        <span style="width: 80px; text-align: right; font-size: 0.875rem; color: var(--text-muted);">${count} (${percentage}%)</span>
+                    </div>
+                `;
+            }).join('');
+        }
+    </script>
+</body>
+</html>

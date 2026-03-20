@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator - Create Free QR Codes | MoneyCalcPro</title>
+    <meta name="description" content="Generate free QR codes for URLs, text, contact info, WiFi, and more. Customize colors and download in PNG or SVG format.">
+    <meta name="keywords" content="QR code generator, create QR code, free QR code, QR code maker">
+    <meta name="author" content="Muhammad Subhan">
+    <link rel="canonical" href="https://moneycalcpro.site/tools/qr-code-generator.html">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <!-- Floating Logo -->
+    <a href="../index.html" class="floating-logo" aria-label="MoneyCalcPro Home">
+        <img src="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png" alt="Moneycalcpro.site Logo">
+    </a>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png" alt="Moneycalcpro.site Logo">
+                <span>MoneyCalcPro</span>
+            </a>
+            <nav class="nav-desktop">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../tools.html" class="nav-link active">Tools</a>
+                <a href="../blog.html" class="nav-link">Blog</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" onclick="ThemeManager.toggle()" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="nav-mobile-overlay"></div>
+    <nav class="nav-mobile">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../tools.html" class="nav-link active">Tools</a>
+        <a href="../blog.html" class="nav-link">Blog</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <section class="page-hero" style="padding: 7rem 0 3rem; background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);">
+        <div class="container">
+            <h1 class="page-hero-title scroll-animate"><i class="fas fa-qrcode"></i> QR Code Generator</h1>
+            <p class="page-hero-subtitle scroll-animate delay-100">Create custom QR codes for URLs, text, contacts, WiFi, and more. Download in PNG format.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" style="gap: 3rem;">
+                <div class="scroll-animate">
+                    <div class="tool-container">
+                        <div class="form-group">
+                            <label class="form-label">QR Code Type</label>
+                            <select id="qr-type" class="form-select">
+                                <option value="url">URL / Website</option>
+                                <option value="text">Plain Text</option>
+                                <option value="email">Email Address</option>
+                                <option value="phone">Phone Number</option>
+                                <option value="sms">SMS Message</option>
+                                <option value="wifi">WiFi Network</option>
+                            </select>
+                        </div>
+                        
+                        <div id="input-container" class="form-group">
+                            <label class="form-label" id="input-label">Website URL</label>
+                            <input type="text" id="qr-input" class="form-input" placeholder="https://example.com">
+                        </div>
+                        
+                        <div id="wifi-options" style="display: none;">
+                            <div class="form-group">
+                                <label class="form-label">Network Name (SSID)</label>
+                                <input type="text" id="wifi-ssid" class="form-input" placeholder="WiFi Network Name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="text" id="wifi-password" class="form-input" placeholder="WiFi Password">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Security Type</label>
+                                <select id="wifi-security" class="form-select">
+                                    <option value="WPA">WPA/WPA2</option>
+                                    <option value="WEP">WEP</option>
+                                    <option value="nopass">No Password</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="slider-container mt-4">
+                            <div class="slider-label">
+                                <span>QR Code Size</span>
+                                <span id="size-value">200px</span>
+                            </div>
+                            <input type="range" id="qr-size" class="slider" min="100" max="500" value="200" step="50">
+                        </div>
+                        
+                        <button id="generate-btn" class="btn btn-primary btn-lg btn-block mt-4" style="background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);">
+                            <i class="fas fa-sync-alt"></i> Generate QR Code
+                        </button>
+                        
+                        <div id="download-section" style="display: none;" class="mt-4">
+                            <button id="download-btn" class="btn btn-primary btn-lg btn-block">
+                                <i class="fas fa-download"></i> Download PNG
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-animate delay-100">
+                    <div id="qr-preview" class="card text-center" style="min-height: 300px; display: flex; align-items: center; justify-content: center;">
+                        <div style="color: var(--text-muted);">
+                            <i class="fas fa-qrcode" style="font-size: 4rem; margin-bottom: 1rem;"></i>
+                            <p>Your QR code will appear here</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mt-4">
+                        <h4 class="mb-3"><i class="fas fa-info-circle text-primary"></i> How to Use</h4>
+                        <ol style="padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li style="margin-bottom: 0.5rem;">Select the type of QR code you want</li>
+                            <li style="margin-bottom: 0.5rem;">Enter the required information</li>
+                            <li style="margin-bottom: 0.5rem;">Adjust the size if needed</li>
+                            <li>Click Generate and download your QR code</li>
+                        </ol>
+                        
+                        <h4 class="mb-3 mt-6"><i class="fas fa-lightbulb text-primary"></i> Use Cases</h4>
+                        <ul style="padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li style="margin-bottom: 0.5rem;">Share website URLs quickly</li>
+                            <li style="margin-bottom: 0.5rem;">Add contact info to business cards</li>
+                            <li style="margin-bottom: 0.5rem;">Share WiFi credentials securely</li>
+                            <li>Create SMS shortcuts for customers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png" alt="Moneycalcpro.site Logo">
+                        <span>MoneyCalcPro</span>
+                    </a>
+                    <p class="footer-text">Your one-stop destination for free online tools.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../tools.html">Tools</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-user mr-2"></i> Muhammad Subhan</li>
+                        <li><a href="mailto:moneycalcpro.site@gmail.com"><i class="fas fa-envelope mr-2"></i> moneycalcpro.site@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 MoneyCalcPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        const qrType = document.getElementById('qr-type');
+        const inputLabel = document.getElementById('input-label');
+        const qrInput = document.getElementById('qr-input');
+        const wifiOptions = document.getElementById('wifi-options');
+        const wifiSsid = document.getElementById('wifi-ssid');
+        const wifiPassword = document.getElementById('wifi-password');
+        const wifiSecurity = document.getElementById('wifi-security');
+        const qrSize = document.getElementById('qr-size');
+        const sizeValue = document.getElementById('size-value');
+        const generateBtn = document.getElementById('generate-btn');
+        const qrPreview = document.getElementById('qr-preview');
+        const downloadSection = document.getElementById('download-section');
+        const downloadBtn = document.getElementById('download-btn');
+        
+        let currentQR = null;
+        
+        const typeLabels = {
+            url: 'Website URL',
+            text: 'Text Content',
+            email: 'Email Address',
+            phone: 'Phone Number',
+            sms: 'Phone Number (for SMS)',
+            wifi: 'WiFi Network'
+        };
+        
+        const typePlaceholders = {
+            url: 'https://example.com',
+            text: 'Enter your text here',
+            email: 'email@example.com',
+            phone: '+1234567890',
+            sms: '+1234567890',
+            wifi: ''
+        };
+        
+        qrType.addEventListener('change', () => {
+            const type = qrType.value;
+            inputLabel.textContent = typeLabels[type];
+            qrInput.placeholder = typePlaceholders[type];
+            
+            if (type === 'wifi') {
+                document.getElementById('input-container').style.display = 'none';
+                wifiOptions.style.display = 'block';
+            } else {
+                document.getElementById('input-container').style.display = 'block';
+                wifiOptions.style.display = 'none';
+            }
+        });
+        
+        qrSize.addEventListener('input', () => {
+            sizeValue.textContent = qrSize.value + 'px';
+        });
+        
+        generateBtn.addEventListener('click', () => {
+            let data = '';
+            const type = qrType.value;
+            
+            if (type === 'wifi') {
+                const ssid = wifiSsid.value.trim();
+                const password = wifiPassword.value;
+                const security = wifiSecurity.value;
+                if (!ssid) {
+                    Toast.error('Please enter the WiFi network name');
+                    return;
+                }
+                data = `WIFI:T:${security};S:${ssid};P:${password};;`;
+            } else {
+                data = qrInput.value.trim();
+                if (!data) {
+                    Toast.error('Please enter the required information');
+                    return;
+                }
+                if (type === 'email') data = `mailto:${data}`;
+                if (type === 'phone') data = `tel:${data}`;
+                if (type === 'sms') data = `sms:${data}`;
+            }
+            
+            qrPreview.innerHTML = '';
+            const size = parseInt(qrSize.value);
+            
+            try {
+                currentQR = new QRCode(qrPreview, {
+                    text: data,
+                    width: size,
+                    height: size,
+                    colorDark: '#000000',
+                    colorLight: '#ffffff',
+                    correctLevel: QRCode.CorrectLevel.M
+                });
+                
+                downloadSection.style.display = 'block';
+                Toast.success('QR Code generated successfully!');
+            } catch (error) {
+                Toast.error('Error generating QR code');
+            }
+        });
+        
+        downloadBtn.addEventListener('click', () => {
+            const img = qrPreview.querySelector('img');
+            if (img) {
+                const a = document.createElement('a');
+                a.href = img.src;
+                a.download = 'qrcode.png';
+                a.click();
+            }
+        });
+    </script>
+</body>
+</html>
