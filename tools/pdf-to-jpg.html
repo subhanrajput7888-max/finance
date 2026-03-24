@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to JPG Converter - Free Online Tool | MoneyCalcPro</title>
+    <meta name="description" content="Convert PDF documents to JPG images for free. Extract pages from PDF files and save them as high-quality JPEG images. No upload required - processing happens in your browser.">
+    <meta name="keywords" content="PDF to JPG, PDF to JPEG, convert PDF to image, PDF converter, extract PDF pages">
+    <meta name="author" content="Muhammad Subhan">
+    <link rel="canonical" href="https://moneycalcpro.site/tools/pdf-to-jpg.html">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+    <!-- Floating Logo -->
+    <a href="../index.html" class="floating-logo" aria-label="MoneyCalcPro Home">
+        <img src="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png" alt="Moneycalcpro.site Logo">
+    </a>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png" alt="Moneycalcpro.site Logo">
+                <span>MoneyCalcPro</span>
+            </a>
+            <nav class="nav-desktop">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../tools.html" class="nav-link active">Tools</a>
+                <a href="../blog.html" class="nav-link">Blog</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" onclick="ThemeManager.toggle()" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="nav-mobile-overlay"></div>
+    <nav class="nav-mobile">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../tools.html" class="nav-link active">Tools</a>
+        <a href="../blog.html" class="nav-link">Blog</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <section class="page-hero" style="padding: 7rem 0 3rem;">
+        <div class="container">
+            <h1 class="page-hero-title scroll-animate"><i class="fas fa-file-pdf"></i> PDF to JPG Converter</h1>
+            <p class="page-hero-subtitle scroll-animate delay-100">Convert PDF pages to high-quality JPG images instantly. All processing happens in your browser.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" style="gap: 3rem;">
+                <div class="scroll-animate">
+                    <div class="tool-container">
+                        <div class="drop-zone" id="drop-zone">
+                            <div class="drop-zone-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                            <div class="drop-zone-text">Drop your PDF file here</div>
+                            <div class="drop-zone-hint">or click to browse (max 50MB)</div>
+                            <input type="file" id="pdf-input" accept=".pdf" style="display: none;">
+                        </div>
+                        
+                        <div class="mt-4" id="controls" style="display: none;">
+                            <div class="slider-container">
+                                <div class="slider-label">
+                                    <span>Image Quality</span>
+                                    <span id="quality-value">90%</span>
+                                </div>
+                                <input type="range" id="quality" class="slider" min="10" max="100" value="90">
+                            </div>
+                            
+                            <div class="checkbox-group mt-4">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" id="all-pages" checked>
+                                    <span>Convert all pages</span>
+                                </label>
+                            </div>
+                            
+                            <div id="page-range-container" style="display: none;" class="mt-4">
+                                <label class="form-label">Page Range (e.g., 1-3, 5)</label>
+                                <input type="text" id="page-range" class="form-input" placeholder="1-3, 5">
+                            </div>
+                            
+                            <button id="convert-btn" class="btn btn-primary btn-lg btn-block mt-4">
+                                <i class="fas fa-cog"></i> Convert to JPG
+                            </button>
+                        </div>
+                        
+                        <div id="progress" class="mt-4" style="display: none;">
+                            <div class="flex justify-between mb-2">
+                                <span>Converting...</span>
+                                <span id="progress-text">0%</span>
+                            </div>
+                            <div style="height: 8px; background: var(--bg-tertiary); border-radius: 4px; overflow: hidden;">
+                                <div id="progress-bar" style="height: 100%; width: 0%; background: var(--primary); transition: width 0.3s;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-animate delay-100">
+                    <div id="preview-container" style="display: none;">
+                        <h3 class="mb-4">Preview</h3>
+                        <div id="preview-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; max-height: 500px; overflow-y: auto;"></div>
+                        <button id="download-all" class="btn btn-primary btn-lg btn-block mt-4">
+                            <i class="fas fa-download"></i> Download All as ZIP
+                        </button>
+                        <button id="download-individual" class="btn btn-secondary btn-block mt-2">
+                            <i class="fas fa-images"></i> Download Individual Images
+                        </button>
+                    </div>
+                    
+                    <div id="info-panel" class="card">
+                        <h4 class="mb-3"><i class="fas fa-info-circle text-primary"></i> How to Use</h4>
+                        <ol style="padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li style="margin-bottom: 0.5rem;">Upload your PDF file by dragging and dropping or clicking the upload area</li>
+                            <li style="margin-bottom: 0.5rem;">Adjust the image quality if needed (higher = better quality, larger file)</li>
+                            <li style="margin-bottom: 0.5rem;">Choose to convert all pages or specify a page range</li>
+                            <li>Click "Convert to JPG" and download your images</li>
+                        </ol>
+                        
+                        <h4 class="mb-3 mt-6"><i class="fas fa-shield-alt text-secondary"></i> Privacy Guaranteed</h4>
+                        <p style="color: var(--text-secondary);">Your PDF files are processed entirely in your browser. They are never uploaded to any server, ensuring complete privacy and security.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 scroll-animate">
+                <div class="card">
+                    <h3 class="mb-4">About PDF to JPG Converter</h3>
+                    <p style="margin-bottom: 1rem;">Our PDF to JPG converter is a powerful, free online tool that allows you to convert PDF documents to high-quality JPEG images. Whether you need to extract a single page or convert an entire document, our tool handles it all with ease.</p>
+                    <p style="margin-bottom: 1rem;"><strong>Key Features:</strong></p>
+                    <ul style="padding-left: 1.5rem; color: var(--text-secondary); margin-bottom: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">Client-side processing - your files never leave your browser</li>
+                        <li style="margin-bottom: 0.5rem;">Adjustable image quality (10-100%)</li>
+                        <li style="margin-bottom: 0.5rem;">Convert all pages or select specific page ranges</li>
+                        <li style="margin-bottom: 0.5rem;">Download as individual images or ZIP archive</li>
+                        <li>Supports PDFs up to 50MB</li>
+                    </ul>
+                    <p style="color: var(--text-secondary);">This tool is perfect for creating image previews of documents, extracting images from PDFs, or converting documents for web use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png" alt="Moneycalcpro.site Logo">
+                        <span>MoneyCalcPro</span>
+                    </a>
+                    <p class="footer-text">Your one-stop destination for free online tools.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../tools.html">Tools</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-user mr-2"></i> Muhammad Subhan</li>
+                        <li><a href="mailto:moneycalcpro.site@gmail.com"><i class="fas fa-envelope mr-2"></i> moneycalcpro.site@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 MoneyCalcPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+        
+        let pdfDoc = null;
+        let convertedImages = [];
+        
+        const dropZone = document.getElementById('drop-zone');
+        const pdfInput = document.getElementById('pdf-input');
+        const controls = document.getElementById('controls');
+        const allPagesCheckbox = document.getElementById('all-pages');
+        const pageRangeContainer = document.getElementById('page-range-container');
+        const convertBtn = document.getElementById('convert-btn');
+        const progress = document.getElementById('progress');
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-text');
+        const previewContainer = document.getElementById('preview-container');
+        const previewGrid = document.getElementById('preview-grid');
+        const qualitySlider = document.getElementById('quality');
+        const qualityValue = document.getElementById('quality-value');
+        
+        dropZone.addEventListener('click', () => pdfInput.click());
+        dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('dragover'); });
+        dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            const file = e.dataTransfer.files[0];
+            if (file && file.type === 'application/pdf') handleFile(file);
+        });
+        pdfInput.addEventListener('change', (e) => {
+            if (e.target.files[0]) handleFile(e.target.files[0]);
+        });
+        
+        qualitySlider.addEventListener('input', (e) => qualityValue.textContent = e.target.value + '%');
+        
+        allPagesCheckbox.addEventListener('change', () => {
+            pageRangeContainer.style.display = allPagesCheckbox.checked ? 'none' : 'block';
+        });
+        
+        async function handleFile(file) {
+            if (file.size > 50 * 1024 * 1024) {
+                Toast.error('File size must be less than 50MB');
+                return;
+            }
+            
+            try {
+                const arrayBuffer = await file.arrayBuffer();
+                pdfDoc = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+                controls.style.display = 'block';
+                document.getElementById('info-panel').style.display = 'none';
+                Toast.success(`PDF loaded: ${pdfDoc.numPages} pages`);
+            } catch (error) {
+                Toast.error('Error loading PDF: ' + error.message);
+            }
+        }
+        
+        convertBtn.addEventListener('click', async () => {
+            if (!pdfDoc) return;
+            
+            const quality = parseInt(qualitySlider.value) / 100;
+            const convertAll = allPagesCheckbox.checked;
+            let pagesToConvert = [];
+            
+            if (convertAll) {
+                pagesToConvert = Array.from({ length: pdfDoc.numPages }, (_, i) => i + 1);
+            } else {
+                const rangeStr = document.getElementById('page-range').value;
+                pagesToConvert = parsePageRange(rangeStr, pdfDoc.numPages);
+            }
+            
+            if (pagesToConvert.length === 0) {
+                Toast.error('Please specify valid page numbers');
+                return;
+            }
+            
+            convertedImages = [];
+            progress.style.display = 'block';
+            previewGrid.innerHTML = '';
+            
+            for (let i = 0; i < pagesToConvert.length; i++) {
+                const pageNum = pagesToConvert[i];
+                const progress = ((i + 1) / pagesToConvert.length) * 100;
+                updateProgress(progress);
+                
+                try {
+                    const page = await pdfDoc.getPage(pageNum);
+                    const scale = 2;
+                    const viewport = page.getViewport({ scale });
+                    
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    canvas.width = viewport.width;
+                    canvas.height = viewport.height;
+                    
+                    await page.render({ canvasContext: ctx, viewport }).promise;
+                    
+                    const imageData = canvas.toDataURL('image/jpeg', quality);
+                    convertedImages.push({ pageNum, data: imageData });
+                    
+                    const img = document.createElement('img');
+                    img.src = imageData;
+                    img.style.width = '100%';
+                    img.style.borderRadius = '8px';
+                    img.style.boxShadow = 'var(--shadow-md)';
+                    
+                    const wrapper = document.createElement('div');
+                    wrapper.innerHTML = `<div style="text-align: center; margin-bottom: 0.5rem; font-size: 0.875rem; color: var(--text-muted);">Page ${pageNum}</div>`;
+                    wrapper.appendChild(img);
+                    previewGrid.appendChild(wrapper);
+                } catch (error) {
+                    console.error('Error converting page', pageNum, error);
+                }
+            }
+            
+            updateProgress(100);
+            setTimeout(() => {
+                progress.style.display = 'none';
+                previewContainer.style.display = 'block';
+                Toast.success(`Converted ${convertedImages.length} pages successfully!`);
+            }, 500);
+        });
+        
+        function parsePageRange(rangeStr, maxPages) {
+            const pages = new Set();
+            const parts = rangeStr.split(',');
+            
+            for (const part of parts) {
+                const trimmed = part.trim();
+                if (trimmed.includes('-')) {
+                    const [start, end] = trimmed.split('-').map(n => parseInt(n.trim()));
+                    if (!isNaN(start) && !isNaN(end)) {
+                        for (let i = Math.max(1, start); i <= Math.min(maxPages, end); i++) {
+                            pages.add(i);
+                        }
+                    }
+                } else {
+                    const num = parseInt(trimmed);
+                    if (!isNaN(num) && num >= 1 && num <= maxPages) {
+                        pages.add(num);
+                    }
+                }
+            }
+            
+            return Array.from(pages).sort((a, b) => a - b);
+        }
+        
+        function updateProgress(value) {
+            progressBar.style.width = value + '%';
+            progressText.textContent = Math.round(value) + '%';
+        }
+        
+        document.getElementById('download-all').addEventListener('click', async () => {
+            if (convertedImages.length === 0) return;
+            
+            const zip = new JSZip();
+            convertedImages.forEach((img, i) => {
+                const base64Data = img.data.split(',')[1];
+                zip.file(`page-${img.pageNum}.jpg`, base64Data, { base64: true });
+            });
+            
+            const content = await zip.generateAsync({ type: 'blob' });
+            const url = URL.createObjectURL(content);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'converted-images.zip';
+            a.click();
+            URL.revokeObjectURL(url);
+            Toast.success('ZIP file downloaded!');
+        });
+        
+        document.getElementById('download-individual').addEventListener('click', () => {
+            convertedImages.forEach((img, i) => {
+                setTimeout(() => {
+                    const a = document.createElement('a');
+                    a.href = img.data;
+                    a.download = `page-${img.pageNum}.jpg`;
+                    a.click();
+                }, i * 200);
+            });
+            Toast.success('Images downloaded!');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compressor - Reduce Image Size Online | MoneyCalcPro</title>
+    <meta name="description" content="Compress JPG, PNG images online without losing quality. Reduce file size for faster web loading and email attachments. Free image compression tool.">
+    <meta name="keywords" content="image compressor, compress image, reduce image size, optimize images, image optimizer">
+    <meta name="author" content="Muhammad Subhan">
+    <link rel="canonical" href="https://moneycalcpro.site/tools/image-compressor.html">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Floating Logo -->
+    <a href="../index.html" class="floating-logo" aria-label="MoneyCalcPro Home">
+        <img src="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png" alt="Moneycalcpro.site Logo">
+    </a>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png" alt="Moneycalcpro.site Logo">
+                <span>MoneyCalcPro</span>
+            </a>
+            <nav class="nav-desktop">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../tools.html" class="nav-link active">Tools</a>
+                <a href="../blog.html" class="nav-link">Blog</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" onclick="ThemeManager.toggle()" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="nav-mobile-overlay"></div>
+    <nav class="nav-mobile">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../tools.html" class="nav-link active">Tools</a>
+        <a href="../blog.html" class="nav-link">Blog</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <section class="page-hero" style="padding: 7rem 0 3rem; background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);">
+        <div class="container">
+            <h1 class="page-hero-title scroll-animate"><i class="fas fa-image"></i> Image Compressor</h1>
+            <p class="page-hero-subtitle scroll-animate delay-100">Reduce image file size without losing quality. Perfect for web optimization and email attachments.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" style="gap: 3rem;">
+                <div class="scroll-animate">
+                    <div class="tool-container">
+                        <div class="drop-zone" id="drop-zone">
+                            <div class="drop-zone-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                            <div class="drop-zone-text">Drop your image here</div>
+                            <div class="drop-zone-hint">or click to browse (JPG, PNG supported)</div>
+                            <input type="file" id="image-input" accept="image/*" style="display: none;">
+                        </div>
+                        
+                        <div id="controls" style="display: none;" class="mt-4">
+                            <div class="slider-container">
+                                <div class="slider-label">
+                                    <span>Compression Quality</span>
+                                    <span id="quality-value">80%</span>
+                                </div>
+                                <input type="range" id="quality" class="slider" min="10" max="100" value="80">
+                                <div class="flex justify-between mt-1" style="font-size: 0.75rem; color: var(--text-muted);">
+                                    <span>Smaller File</span>
+                                    <span>Better Quality</span>
+                                </div>
+                            </div>
+                            
+                            <div class="card mt-4" style="background: var(--bg-tertiary);">
+                                <div class="flex justify-between mb-2">
+                                    <span>Original Size:</span>
+                                    <span id="original-size" style="font-weight: 600;">-</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Estimated Size:</span>
+                                    <span id="estimated-size" style="font-weight: 600; color: var(--primary);">-</span>
+                                </div>
+                            </div>
+                            
+                            <button id="compress-btn" class="btn btn-primary btn-lg btn-block mt-4" style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);">
+                                <i class="fas fa-compress-alt"></i> Compress Image
+                            </button>
+                        </div>
+                        
+                        <div id="result" style="display: none;" class="mt-4">
+                            <div class="card" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: white; border: none;">
+                                <div class="flex justify-between align-center mb-3">
+                                    <span>Compression Complete!</span>
+                                    <span id="savings" style="font-size: 1.25rem; font-weight: 800;"></span>
+                                </div>
+                                <div class="flex justify-between" style="font-size: 0.875rem; opacity: 0.9;">
+                                    <span>Before: <span id="result-before"></span></span>
+                                    <span>After: <span id="result-after"></span></span>
+                                </div>
+                            </div>
+                            <button id="download-btn" class="btn btn-primary btn-lg btn-block mt-4">
+                                <i class="fas fa-download"></i> Download Compressed Image
+                            </button>
+                            <button id="new-btn" class="btn btn-ghost btn-block mt-2">
+                                <i class="fas fa-redo"></i> Compress Another Image
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-animate delay-100">
+                    <div id="preview-section" style="display: none;">
+                        <h4 class="mb-3">Preview</h4>
+                        <div class="card" style="padding: 0; overflow: hidden;">
+                            <img id="preview-image" style="width: 100%; display: block;">
+                        </div>
+                        <div class="grid grid-2 mt-4" style="gap: 1rem;">
+                            <div class="card text-center">
+                                <div style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 0.25rem;">Width</div>
+                                <div id="img-width" style="font-weight: 600;">-</div>
+                            </div>
+                            <div class="card text-center">
+                                <div style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 0.25rem;">Height</div>
+                                <div id="img-height" style="font-weight: 600;">-</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="info-panel" class="card">
+                        <h4 class="mb-3"><i class="fas fa-info-circle text-primary"></i> How to Use</h4>
+                        <ol style="padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li style="margin-bottom: 0.5rem;">Upload your JPG or PNG image</li>
+                            <li style="margin-bottom: 0.5rem;">Adjust the quality slider (higher = better quality)</li>
+                            <li style="margin-bottom: 0.5rem;">Preview the estimated file size</li>
+                            <li>Click "Compress Image" and download</li>
+                        </ol>
+                        
+                        <h4 class="mb-3 mt-6"><i class="fas fa-lightbulb text-primary"></i> Tips</h4>
+                        <ul style="padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li style="margin-bottom: 0.5rem;"><strong>80% quality</strong> is usually a good balance</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>Web images:</strong> Use 60-80% quality</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>Email:</strong> Use 40-60% quality</li>
+                            <li>All processing happens in your browser</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="https://i.ibb.co/hJxJMLP6/moneycalcpro-logo.png" alt="Moneycalcpro.site Logo">
+                        <span>MoneyCalcPro</span>
+                    </a>
+                    <p class="footer-text">Your one-stop destination for free online tools.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../tools.html">Tools</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-user mr-2"></i> Muhammad Subhan</li>
+                        <li><a href="mailto:moneycalcpro.site@gmail.com"><i class="fas fa-envelope mr-2"></i> moneycalcpro.site@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 MoneyCalcPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        const dropZone = document.getElementById('drop-zone');
+        const imageInput = document.getElementById('image-input');
+        const controls = document.getElementById('controls');
+        const qualitySlider = document.getElementById('quality');
+        const qualityValue = document.getElementById('quality-value');
+        const originalSize = document.getElementById('original-size');
+        const estimatedSize = document.getElementById('estimated-size');
+        const previewSection = document.getElementById('preview-section');
+        const previewImage = document.getElementById('preview-image');
+        const imgWidth = document.getElementById('img-width');
+        const imgHeight = document.getElementById('img-height');
+        const compressBtn = document.getElementById('compress-btn');
+        const result = document.getElementById('result');
+        const downloadBtn = document.getElementById('download-btn');
+        const newBtn = document.getElementById('new-btn');
+        
+        let currentFile = null;
+        let compressedDataUrl = null;
+        
+        dropZone.addEventListener('click', () => imageInput.click());
+        dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('dragover'); });
+        dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            if (e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
+        });
+        imageInput.addEventListener('change', (e) => {
+            if (e.target.files[0]) handleFile(e.target.files[0]);
+        });
+        
+        qualitySlider.addEventListener('input', updateEstimate);
+        
+        function handleFile(file) {
+            if (!file.type.startsWith('image/')) {
+                Toast.error('Please select a valid image file');
+                return;
+            }
+            
+            currentFile = file;
+            originalSize.textContent = formatFileSize(file.size);
+            
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                previewImage.src = e.target.result;
+                const img = new Image();
+                img.onload = () => {
+                    imgWidth.textContent = img.width + 'px';
+                    imgHeight.textContent = img.height + 'px';
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+            
+            controls.style.display = 'block';
+            previewSection.style.display = 'block';
+            document.getElementById('info-panel').style.display = 'none';
+            updateEstimate();
+        }
+        
+        function updateEstimate() {
+            qualityValue.textContent = qualitySlider.value + '%';
+            if (!currentFile) return;
+            
+            const ratio = parseInt(qualitySlider.value) / 100;
+            const estimated = currentFile.size * (0.1 + ratio * 0.7);
+            estimatedSize.textContent = formatFileSize(estimated);
+        }
+        
+        compressBtn.addEventListener('click', () => {
+            if (!currentFile) return;
+            
+            const quality = parseInt(qualitySlider.value) / 100;
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const img = new Image();
+            
+            img.onload = () => {
+                canvas.width = img.width;
+                canvas.height = img.height;
+                ctx.drawImage(img, 0, 0);
+                
+                const outputFormat = currentFile.type === 'image/png' ? 'image/png' : 'image/jpeg';
+                compressedDataUrl = canvas.toDataURL(outputFormat, quality);
+                
+                const base64Length = compressedDataUrl.split(',')[1].length;
+                const compressedSize = Math.ceil(base64Length * 0.75);
+                
+                const savings = ((1 - compressedSize / currentFile.size) * 100).toFixed(1);
+                
+                document.getElementById('savings').textContent = `-${savings}%`;
+                document.getElementById('result-before').textContent = formatFileSize(currentFile.size);
+                document.getElementById('result-after').textContent = formatFileSize(compressedSize);
+                
+                controls.style.display = 'none';
+                result.style.display = 'block';
+                
+                Toast.success('Image compressed successfully!');
+            };
+            
+            img.src = previewImage.src;
+        });
+        
+        downloadBtn.addEventListener('click', () => {
+            if (!compressedDataUrl) return;
+            const a = document.createElement('a');
+            a.href = compressedDataUrl;
+            a.download = 'compressed-' + currentFile.name;
+            a.click();
+        });
+        
+        newBtn.addEventListener('click', () => {
+            currentFile = null;
+            compressedDataUrl = null;
+            controls.style.display = 'none';
+            result.style.display = 'none';
+            previewSection.style.display = 'none';
+            document.getElementById('info-panel').style.display = 'block';
+            imageInput.value = '';
+        });
+        
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+    </script>
+</body>
+</html>
