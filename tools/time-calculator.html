@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Add and calculate time durations easily. Hours and minutes calculator for scheduling and time management.">
+    <meta name="keywords" content="time calculator, add time, hours calculator, minutes calculator, time duration">
+    <meta name="author" content="Subhan Ali">
+    <title>Time Calculator - Add & Calculate Time | MoneyCalcPro</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://i.ibb.co/fV6XRsFY/logo.png" alt="MoneyCalcPro Logo" onerror="this.style.display='none'">
+                <span class="logo-text">MoneyCalcPro</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../tools.html">Tools</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="../index.html">Home</a> > <a href="../tools.html">Tools</a> > <span>Time Calculator</span>
+    </nav>
+
+    <section class="container" style="padding: 1rem 2rem 0;">
+        <a href="../tools.html" class="btn" style="display: inline-block; margin-bottom: 1rem;">← Back to All Tools</a>
+    </section>
+
+    <section class="hero" style="padding: 3rem 2rem;">
+        <div class="hero-content">
+            <h1>Time Calculator</h1>
+            <p>Add and calculate time durations easily</p>
+        </div>
+    </section>
+
+    <section class="tool-detail-section">
+        <div class="tool-card" style="max-width: 600px; margin: 0 auto;">
+            <div class="tool-header">
+                <div class="tool-icon">⏱️</div>
+                <h3 class="tool-title">Add Time Durations</h3>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group">
+                    <label>Time 1</label>
+                    <input type="number" id="time1Hours" placeholder="Hours" min="0">
+                    <input type="number" id="time1Minutes" placeholder="Minutes" min="0" max="59" style="margin-top: 0.5rem;">
+                </div>
+                <div class="form-group">
+                    <label>Time 2</label>
+                    <input type="number" id="time2Hours" placeholder="Hours" min="0">
+                    <input type="number" id="time2Minutes" placeholder="Minutes" min="0" max="59" style="margin-top: 0.5rem;">
+                </div>
+            </div>
+            <button class="btn" id="timeCalculate" style="width: 100%; margin-top: 1rem;">Add Time</button>
+            <div id="timeResult" class="result-box" style="display: none;"></div>
+        </div>
+
+        <div class="tool-info-section">
+            <h2>What is a Time Calculator?</h2>
+            <p>A Time Calculator helps you add, subtract, and calculate time durations. Whether you're tracking work hours, planning project timelines, calculating travel time, or managing your schedule, this tool makes time calculations quick and accurate.</p>
+            <p>Stop struggling with manual time math! Our calculator handles hours and minutes seamlessly, converting overflow minutes to hours automatically.</p>
+
+            <h2>How Time Calculations Work</h2>
+            <p>Time uses a base-60 system (60 minutes = 1 hour), which makes manual calculations tricky. Our calculator:</p>
+            <ul>
+                <li><strong>Converts to minutes:</strong> All times are converted to total minutes</li>
+                <li><strong>Performs calculation:</strong> Addition or subtraction in minutes</li>
+                <li><strong>Converts back:</strong> Result is converted to hours and minutes</li>
+                <li><strong>Handles overflow:</strong> Automatically manages minute-to-hour conversion</li>
+            </ul>
+
+            <h2>Formula</h2>
+            <div class="formula-box">
+                Total Minutes = (Hours₁ × 60 + Minutes₁) + (Hours₂ × 60 + Minutes₂)<br>
+                Result Hours = Total Minutes ÷ 60<br>
+                Result Minutes = Total Minutes % 60
+            </div>
+
+            <h2>Example Calculations</h2>
+            <div class="example-box">
+                <p><strong>Example 1: Work Hours</strong></p>
+                <ul>
+                    <li>Morning: 3 hours 45 minutes</li>
+                    <li>Afternoon: 4 hours 30 minutes</li>
+                    <li>Total: 8 hours 15 minutes</li>
+                </ul>
+                <p><strong>Example 2: Travel Time</strong></p>
+                <ul>
+                    <li>Flight 1: 2 hours 20 minutes</li>
+                    <li>Layover: 1 hour 45 minutes</li>
+                    <li>Flight 2: 3 hours 10 minutes</li>
+                    <li>Total: 7 hours 15 minutes</li>
+                </ul>
+            </div>
+
+            <h2>Common Uses</h2>
+            <ul class="benefits-list">
+                <li>Track work hours and overtime</li>
+                <li>Calculate project timelines</li>
+                <li>Plan travel itineraries</li>
+                <li>Schedule meetings and appointments</li>
+                <li>Calculate study time</li>
+                <li>Manage fitness workout durations</li>
+            </ul>
+
+            <h2>Frequently Asked Questions</h2>
+            <h3>How do I calculate time differences?</h3>
+            <p>Convert both times to a 24-hour format, then subtract. If minutes go negative, borrow 1 hour (60 minutes) from the hours.</p>
+
+            <h3>What's the difference between duration and time of day?</h3>
+            <p>Duration is how long something takes (3 hours 30 minutes). Time of day is when something happens (3:30 PM). This calculator focuses on durations.</p>
+
+            <h3>Can I calculate more than 2 times?</h3>
+            <p>Yes! Use the result as Time 1 and add another time as Time 2. Repeat for as many times as needed.</p>
+
+            <h2>Time Management Tips</h2>
+            <ol>
+                <li>Use the Pomodoro Technique (25 min work, 5 min break)</li>
+                <li>Batch similar tasks together</li>
+                <li>Track your time for one week to identify patterns</li>
+                <li>Schedule buffer time between meetings</li>
+                <li>Prioritize tasks using the Eisenhower Matrix</li>
+                <li>Eliminate time-wasting activities</li>
+            </ol>
+        </div>
+
+        <div style="margin-top: 3rem;">
+            <h2 style="text-align: center; color: var(--primary-color);">Related Tools</h2>
+            <div class="related-tools-grid">
+                <a href="age-calculator.html" class="related-tool-card">
+                    <div class="related-tool-icon">🎂</div>
+                    <h4>Age Calculator</h4>
+                    <p>Calculate your exact age</p>
+                </a>
+                <a href="unit-converter.html" class="related-tool-card">
+                    <div class="related-tool-icon">📏</div>
+                    <h4>Unit Converter</h4>
+                    <p>Convert between units</p>
+                </a>
+                <a href="emi-calculator.html" class="related-tool-card">
+                    <div class="related-tool-icon">💰</div>
+                    <h4>EMI Calculator</h4>
+                    <p>Calculate loan payments</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section"><h3>MoneyCalcPro</h3><p>Your trusted source for free online calculators and financial tools.</p></div>
+            <div class="footer-section"><h3>Quick Links</h3><ul><li><a href="../index.html">Home</a></li><li><a href="../tools.html">Tools</a></li><li><a href="../blog.html">Blog</a></li><li><a href="../about.html">About Us</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+            <div class="footer-section"><h3>Legal</h3><ul><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../disclaimer.html">Disclaimer</a></li></ul></div>
+            <div class="footer-section"><h3>Contact</h3><ul><li>Subhan Ali</li><li>Email: subhanrajput3222@gmail.com</li><li>Phone: 0367342556</li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 MoneyCalcPro. All rights reserved. | Created by Subhan Ali</p></div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('timeCalculate').addEventListener('click', function() {
+            const h1 = parseInt(document.getElementById('time1Hours').value) || 0;
+            const m1 = parseInt(document.getElementById('time1Minutes').value) || 0;
+            const h2 = parseInt(document.getElementById('time2Hours').value) || 0;
+            const m2 = parseInt(document.getElementById('time2Minutes').value) || 0;
+            const resultDiv = document.getElementById('timeResult');
+
+            const totalMinutes1 = h1 * 60 + m1;
+            const totalMinutes2 = h2 * 60 + m2;
+            const totalMinutes = totalMinutes1 + totalMinutes2;
+            
+            const resultHours = Math.floor(totalMinutes / 60);
+            const resultMinutes = totalMinutes % 60;
+
+            resultDiv.innerHTML = `
+                <div style="margin-bottom: 0.5rem; font-size: 1.2rem;">
+                    <strong>Total Time: ${resultHours} hours ${resultMinutes} minutes</strong>
+                </div>
+                <div style="font-size: 0.9rem;">Total Minutes: ${totalMinutes} minutes</div>
+                <div style="font-size: 0.9rem;">Total Hours: ${(totalMinutes/60).toFixed(2)} hours</div>
+            `;
+            resultDiv.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert articles on finance, insurance, home buying, and gardening. Learn money-saving tips and best practices.">
+    <meta name="author" content="Subhan Ali">
+    <title>Blog - Financial Tips & Expert Advice | MoneyCalcPro</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://i.ibb.co/fV6XRsFY/logo.png" alt="MoneyCalcPro Logo" onerror="this.style.display='none'">
+                <span class="logo-text">MoneyCalcPro</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" style="padding: 4rem 2rem; background: linear-gradient(135deg, var(--primary-color) 0%, #1a5276 100%);">
+        <div class="hero-content">
+            <h1>MoneyCalcPro Blog - Expert Financial Insights</h1>
+            <p>20+ in-depth articles on finance, insurance, home buying, and money-saving strategies written by experts</p>
+        </div>
+    </section>
+
+    <!-- Why Read Our Blog Section -->
+    <section class="container" style="padding: 3rem 2rem; background: linear-gradient(135deg, #f0f7ff 0%, #e8f4f8 100%);">
+        <h2 class="section-title scroll-reveal" style="margin-bottom: 2rem;">Why Read Our Blog?</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+            <div class="scroll-reveal" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">✍️</div>
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Expert-Written Content</h3>
+                <p style="color: var(--text-light);">All articles written by financial experts with years of real-world experience.</p>
+            </div>
+            <div class="scroll-reveal" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">📚</div>
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Comprehensive Guides</h3>
+                <p style="color: var(--text-light);">In-depth articles with 3000+ words, step-by-step instructions, and real examples.</p>
+            </div>
+            <div class="scroll-reveal" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">💡</div>
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Actionable Advice</h3>
+                <p style="color: var(--text-light);">Practical tips you can implement immediately to save money and build wealth.</p>
+            </div>
+            <div class="scroll-reveal" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🔄</div>
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Regularly Updated</h3>
+                <p style="color: var(--text-light);">Fresh content added weekly with the latest financial news and strategies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="padding: 3rem 2rem;">
+        <!-- Search and Filter -->
+        <div style="margin-bottom: 3rem; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h3 style="margin-bottom: 1rem; color: var(--primary-color);">🔍 Find the Right Article for You</h3>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <input type="text" id="blogSearch" placeholder="Search articles by keyword..." style="flex: 1; min-width: 250px; padding: 0.75rem; border: 2px solid var(--border-color); border-radius: 8px; font-size: 1rem;">
+                <select id="categoryFilter" style="padding: 0.75rem; border: 2px solid var(--border-color); border-radius: 8px; font-size: 1rem; min-width: 200px;">
+                    <option value="all">All Categories</option>
+                    <option value="finance">💰 Finance</option>
+                    <option value="insurance">🛡️ Insurance</option>
+                    <option value="home">🏠 Home</option>
+                    <option value="garden">🌱 Garden</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Finance Articles Section -->
+        <div style="margin-bottom: 4rem;">
+            <h2 class="section-title scroll-reveal">💰 Finance & Money Management</h2>
+            <p class="section-subtitle scroll-reveal" style="margin-bottom: 2rem;">Master your money with expert financial advice, investment strategies, and savings tips</p>
+            
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+            <!-- Finance Articles (1-5) -->
+            <div class="blog-card scroll-reveal" data-category="finance">
+                <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800" alt="Financial Planning">
+                <div class="blog-content">
+                    <span class="blog-category">Finance</span>
+                    <h3>The Complete Guide to Personal Financial Planning in 2024</h3>
+                    <p>Learn how to create a comprehensive financial plan that secures your future and helps you achieve your goals...</p>
+                    <a href="blog-articles/article-1.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card scroll-reveal" data-category="finance">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800" alt="Investment Strategies">
+                <div class="blog-content">
+                    <span class="blog-category">Finance</span>
+                    <h3>Smart Investment Strategies for Beginners: Building Wealth Step by Step</h3>
+                    <p>Discover proven investment strategies that can help you build long-term wealth even if you're just starting out...</p>
+                    <a href="blog-articles/article-2.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card scroll-reveal" data-category="finance">
+                <img src="https://images.unsplash.com/photo-1553729459-afe8f2e2ed08?w=800" alt="Savings Tips">
+                <div class="blog-content">
+                    <span class="blog-category">Finance</span>
+                    <h3>10 Proven Savings Tips That Will Transform Your Financial Life</h3>
+                    <p>Practical savings strategies that actually work and can help you build an emergency fund quickly...</p>
+                    <a href="blog-articles/article-3.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card scroll-reveal" data-category="finance">
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800" alt="Credit Score">
+                <div class="blog-content">
+                    <span class="blog-category">Finance</span>
+                    <h3>Understanding Credit Scores: How to Improve Yours Fast</h3>
+                    <p>Everything you need to know about credit scores and actionable steps to boost your rating...</p>
+                    <a href="blog-articles/article-4.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card scroll-reveal" data-category="finance">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800" alt="Retirement Planning">
+                <div class="blog-content">
+                    <span class="blog-category">Finance</span>
+                    <h3>Retirement Planning 101: Securing Your Golden Years</h3>
+                    <p>A comprehensive guide to retirement planning, including 401(k)s, IRAs, and investment strategies...</p>
+                    <a href="blog-articles/article-5.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <!-- Insurance Articles (6-10) -->
+            <div class="blog-card scroll-reveal" data-category="insurance">
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800" alt="Life Insurance">
+                <div class="blog-content">
+                    <span class="blog-category">Insurance</span>
+                    <h3>Understanding Life Insurance: What You Need to Know</h3>
+                    <p>Discover the different types of life insurance and how to choose the right coverage for your family...</p>
+                    <a href="blog-articles/article-6.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card scroll-reveal" data-category="insurance">
+                <img src="https://images.unsplash.com/photo-1569025690938-a00729c9e1f9?w=800" alt="Health Insurance">
+                <div class="blog-content">
+                    <span class="blog-category">Insurance</span>
+                    <h3>Health Insurance Explained: Finding the Right Coverage</h3>
+                    <p>Navigate the complex world of health insurance with our comprehensive guide to plans and coverage...</p>
+                    <a href="blog-articles/article-7.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card scroll-reveal" data-category="insurance">
+                <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800" alt="Car Insurance">
+                <div class="blog-content">
+                    <span class="blog-category">Insurance</span>
+                    <h3>Car Insurance Guide: How to Get the Best Rates</h3>
+                    <p>Learn how to compare car insurance policies and save money while maintaining adequate coverage...</p>
+                    <a href="blog-articles/article-8.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card scroll-reveal" data-category="insurance">
+                <img src="https://images.unsplash.com/photo-1507936598781-b5679dfdc1b9?w=800" alt="Insurance Claims">
+                <div class="blog-content">
+                    <span class="blog-category">Insurance</span>
+                    <h3>How to File Insurance Claims: A Step-by-Step Guide</h3>
+                    <p>Master the insurance claims process with our detailed walkthrough and expert tips for success...</p>
+                    <a href="blog-articles/article-9.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card scroll-reveal" data-category="insurance">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800" alt="Insurance Comparison">
+                <div class="blog-content">
+                    <span class="blog-category">Insurance</span>
+                    <h3>Insurance Comparison: Making Smart Choices for Your Budget</h3>
+                    <p>Compare different insurance providers and policies to find the best value for your money...</p>
+                    <a href="blog-articles/article-10.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Home Articles Section -->
+        <div style="margin-bottom: 4rem;">
+            <h2 class="section-title scroll-reveal">🏠 Home Buying & Maintenance</h2>
+            <p class="section-subtitle scroll-reveal" style="margin-bottom: 2rem;">Expert advice for homeowners, buyers, and property investors</p>
+            <div class="blog-grid">
+
+            <!-- Home Articles (11-15) -->
+            <div class="blog-card scroll-reveal" data-category="home">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800" alt="Home Buying">
+                <div class="blog-content">
+                    <span class="blog-category">Home</span>
+                    <h3>First-Time Home Buyer's Guide: Everything You Should Know</h3>
+                    <p>A comprehensive guide for first-time home buyers covering mortgages, inspections, and closing costs...</p>
+                    <a href="blog-articles/article-11.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card scroll-reveal" data-category="home">
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800" alt="Home Maintenance">
+                <div class="blog-content">
+                    <span class="blog-category">Home</span>
+                    <h3>Essential Home Maintenance Tips Every Homeowner Should Know</h3>
+                    <p>Keep your home in top condition with these essential maintenance tips and seasonal checklists...</p>
+                    <a href="blog-articles/article-12.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card scroll-reveal" data-category="home">
+                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800" alt="Home Decoration">
+                <div class="blog-content">
+                    <span class="blog-category">Home</span>
+                    <h3>Budget-Friendly Home Decoration Ideas That Look Expensive</h3>
+                    <p>Transform your living space without breaking the bank with these clever decoration ideas...</p>
+                    <a href="blog-articles/article-13.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card scroll-reveal" data-category="home">
+                <img src="https://images.unsplash.com/photo-1560520653-9e0e4c893111?w=800" alt="Mortgage Guide">
+                <div class="blog-content">
+                    <span class="blog-category">Home</span>
+                    <h3>Mortgage Types Explained: Finding the Right Loan for You</h3>
+                    <p>Understand different mortgage options including fixed-rate, adjustable-rate, and government-backed loans...</p>
+                    <a href="blog-articles/article-14.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card scroll-reveal" data-category="home">
+                <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800" alt="Home Renovation">
+                <div class="blog-content">
+                    <span class="blog-category">Home</span>
+                    <h3>Home Renovation on a Budget: Maximizing Your Investment</h3>
+                    <p>Learn which home improvements offer the best return on investment and how to plan your renovation...</p>
+                    <a href="blog-articles/article-15.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Garden Articles Section -->
+        <div style="margin-bottom: 4rem;">
+            <h2 class="section-title scroll-reveal">🌱 Garden & Outdoor Living</h2>
+            <p class="section-subtitle scroll-reveal" style="margin-bottom: 2rem;">Create beautiful outdoor spaces while saving money with DIY gardening tips</p>
+            <div class="blog-grid">
+
+            <!-- Garden Articles (16-20) -->
+            <div class="blog-card scroll-reveal" data-category="garden">
+                <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800" alt="Garden Landscaping">
+                <div class="blog-content">
+                    <span class="blog-category">Garden</span>
+                    <h3>Beginner's Guide to Garden Landscaping: Transform Your Outdoor Space</h3>
+                    <p>Create a beautiful garden landscape with these beginner-friendly tips and design principles...</p>
+                    <a href="blog-articles/article-16.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card scroll-reveal" data-category="garden">
+                <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800" alt="Plant Care">
+                <div class="blog-content">
+                    <span class="blog-category">Garden</span>
+                    <h3>Essential Plant Care Tips for a Thriving Garden Year-Round</h3>
+                    <p>Master the basics of plant care including watering, fertilizing, pruning, and pest control...</p>
+                    <a href="blog-articles/article-17.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card scroll-reveal" data-category="garden">
+                <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800" alt="Garden Maintenance">
+                <div class="blog-content">
+                    <span class="blog-category">Garden</span>
+                    <h3>Seasonal Garden Maintenance: What to Do and When</h3>
+                    <p>A complete seasonal guide to keeping your garden healthy and beautiful throughout the year...</p>
+                    <a href="blog-articles/article-18.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card scroll-reveal" data-category="garden">
+                <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=800" alt="Vegetable Garden">
+                <div class="blog-content">
+                    <span class="blog-category">Garden</span>
+                    <h3>Starting a Vegetable Garden: From Seed to Harvest</h3>
+                    <p>Grow your own fresh vegetables with this comprehensive guide to starting and maintaining a vegetable garden...</p>
+                    <a href="blog-articles/article-19.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card scroll-reveal" data-category="garden">
+                <img src="https://images.unsplash.com/photo-1591857177525-970351563775?w=800" alt="Garden Budget">
+                <div class="blog-content">
+                    <span class="blog-category">Garden</span>
+                    <h3>Gardening on a Budget: Money-Saving Tips for Garden Enthusiasts</h3>
+                    <p>Create a stunning garden without spending a fortune with these practical money-saving tips and tricks...</p>
+                    <a href="blog-articles/article-20.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Newsletter Section -->
+        <div style="background: linear-gradient(135deg, var(--primary-color) 0%, #1a5276 100%); padding: 3rem 2rem; border-radius: 12px; text-align: center; margin: 4rem auto; max-width: 800px; color: white;">
+            <h2 style="color: white; margin-bottom: 1rem;">📧 Stay Updated with Our Latest Articles</h2>
+            <p style="margin-bottom: 2rem; color: rgba(255,255,255,0.9);">Get weekly financial tips, money-saving strategies, and expert insights delivered to your inbox</p>
+            <div style="display: flex; gap: 1rem; max-width: 500px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
+                <input type="email" placeholder="Enter your email" style="flex: 1; min-width: 250px; padding: 1rem; border: none; border-radius: 8px; font-size: 1rem;">
+                <button class="btn" style="padding: 1rem 2rem; font-size: 1rem;">Subscribe Free</button>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: rgba(255,255,255,0.8);">✓ Free forever  ✓ No spam  ✓ Unsubscribe anytime</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MoneyCalcPro</h3>
+                <p>Your trusted source for free online calculators and financial tools.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>Subhan Ali</li>
+                    <li>Email: subhanrajput3222@gmail.com</li>
+                    <li>Phone: 0367342556</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MoneyCalcPro. All rights reserved. | Created by Subhan Ali</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>
