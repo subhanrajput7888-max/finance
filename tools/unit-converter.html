@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Convert between different units of measurement instantly. Length, weight, temperature and more with our free Unit Converter.">
+    <meta name="keywords" content="unit converter, length converter, weight converter, temperature, conversion tool, metric imperial">
+    <meta name="author" content="Subhan Ali">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.moneycalcpro.site/tools/unit-converter.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.moneycalcpro.site/tools/unit-converter.html">
+    <meta property="og:title" content="Free Unit Converter - Length, Weight, Temperature | MoneyCalcPro">
+    <meta property="og:description" content="Convert between different units of measurement. Free online unit converter.">
+    <meta property="og:site_name" content="MoneyCalcPro">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Unit Converter - Length, Weight, Temperature">
+    <meta name="twitter:description" content="Convert units instantly. 100% free online converter.">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Unit Converter - MoneyCalcPro",
+        "description": "Free online unit converter for all measurements",
+        "url": "https://www.moneycalcpro.site/tools/unit-converter.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    
+    <title>Unit Converter - Convert Length, Weight, Temperature | MoneyCalcPro</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://i.ibb.co/fV6XRsFY/logo.png" alt="MoneyCalcPro Logo" onerror="this.style.display='none'">
+                <span class="logo-text">MoneyCalcPro</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../tools.html">Tools</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="../index.html">Home</a> > <a href="../tools.html">Tools</a> > <span>Unit Converter</span>
+    </nav>
+
+    <section class="container" style="padding: 1rem 2rem 0;">
+        <a href="../tools.html" class="btn" style="display: inline-block; margin-bottom: 1rem;">← Back to All Tools</a>
+    </section>
+
+    <section class="hero" style="padding: 3rem 2rem;">
+        <div class="hero-content">
+            <h1>Unit Converter</h1>
+            <p>Convert between different units of measurement instantly</p>
+        </div>
+    </section>
+
+    <section class="tool-detail-section">
+        <div class="tool-card" style="max-width: 600px; margin: 0 auto;">
+            <div class="tool-header">
+                <div class="tool-icon">📏</div>
+                <h3 class="tool-title">Convert Units</h3>
+            </div>
+            <div class="form-group">
+                <label for="unitCategory">Category</label>
+                <select id="unitCategory" style="padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 5px;">
+                    <option value="length">Length</option>
+                    <option value="weight">Weight</option>
+                    <option value="temperature">Temperature</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="unitValue">Value</label>
+                <input type="number" id="unitValue" placeholder="e.g., 100">
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group">
+                    <label for="unitFrom">From</label>
+                    <select id="unitFrom" style="padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 5px;">
+                        <option value="m">Meters (m)</option>
+                        <option value="km">Kilometers (km)</option>
+                        <option value="cm">Centimeters (cm)</option>
+                        <option value="ft">Feet (ft)</option>
+                        <option value="in">Inches (in)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="unitTo">To</label>
+                    <select id="unitTo" style="padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 5px;">
+                        <option value="ft">Feet (ft)</option>
+                        <option value="m">Meters (m)</option>
+                        <option value="km">Kilometers (km)</option>
+                        <option value="cm">Centimeters (cm)</option>
+                        <option value="in">Inches (in)</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn" id="unitConvert" style="width: 100%;">Convert</button>
+            <div id="unitResult" class="result-box" style="display: none;"></div>
+        </div>
+
+        <div class="tool-info-section">
+            <h2>What is a Unit Converter?</h2>
+            <p>A Unit Converter is an essential tool that helps you convert measurements from one unit to another. Whether you're working on a science project, cooking, traveling internationally, or doing construction work, unit conversions are frequently needed.</p>
+            <p>Our converter supports multiple categories including length, weight, and temperature, making it your go-to tool for all measurement conversion needs. No more manual calculations or remembering conversion factors!</p>
+
+            <h2>Supported Conversions</h2>
+            <ul>
+                <li><strong>Length:</strong> Meters, kilometers, centimeters, feet, inches, miles, yards</li>
+                <li><strong>Weight:</strong> Kilograms, grams, pounds, ounces, tons</li>
+                <li><strong>Temperature:</strong> Celsius, Fahrenheit, Kelvin</li>
+            </ul>
+
+            <h2>Common Conversion Formulas</h2>
+            <div class="formula-box">
+                <strong>Length:</strong><br>
+                1 meter = 3.281 feet<br>
+                1 kilometer = 0.621 miles<br>
+                1 inch = 2.54 centimeters<br><br>
+                <strong>Weight:</strong><br>
+                1 kilogram = 2.205 pounds<br>
+                1 ounce = 28.35 grams<br><br>
+                <strong>Temperature:</strong><br>
+                °F = (°C × 9/5) + 32<br>
+                °C = (°F - 32) × 5/9
+            </div>
+
+            <h2>Example Conversions</h2>
+            <div class="example-box">
+                <p><strong>Example 1: Length</strong></p>
+                <ul>
+                    <li>100 meters = 328.08 feet</li>
+                    <li>5 kilometers = 3.11 miles</li>
+                </ul>
+                <p><strong>Example 2: Weight</strong></p>
+                <ul>
+                    <li>70 kilograms = 154.32 pounds</li>
+                    <li>16 ounces = 453.59 grams</li>
+                </ul>
+                <p><strong>Example 3: Temperature</strong></p>
+                <ul>
+                    <li>100°C = 212°F (Boiling point of water)</li>
+                    <li>32°F = 0°C (Freezing point of water)</li>
+                </ul>
+            </div>
+
+            <h2>Benefits</h2>
+            <ul class="benefits-list">
+                <li>Instant accurate conversions</li>
+                <li>Multiple measurement categories</li>
+                <li>No need to memorize conversion factors</li>
+                <li>Perfect for students and professionals</li>
+                <li>Free and easy to use</li>
+                <li>Works offline once loaded</li>
+            </ul>
+
+            <h2>Frequently Asked Questions</h2>
+            <h3>How accurate are the conversions?</h3>
+            <p>Our conversions use standard conversion factors and are accurate to multiple decimal places, suitable for everyday use and most professional applications.</p>
+
+            <h3>Why are unit conversions important?</h3>
+            <p>Different countries and industries use different measurement systems. Conversions ensure accuracy in international trade, science, engineering, and daily life.</p>
+
+            <h3>What's the difference between metric and imperial systems?</h3>
+            <p>The metric system (meters, kilograms) is used worldwide and is based on powers of 10. The imperial system (feet, pounds) is primarily used in the US and UK.</p>
+
+            <h2>Interesting Measurement Facts</h2>
+            <ol>
+                <li>The metric system was developed in France during the French Revolution</li>
+                <li>A marathon is exactly 42.195 kilometers (26.22 miles)</li>
+                <li>The kilogram was the last SI unit defined by a physical object until 2019</li>
+                <li>Temperature scales intersect at -40° (both Celsius and Fahrenheit)</li>
+                <li>The inch was originally based on the width of a human thumb</li>
+            </ol>
+        </div>
+
+        <div style="margin-top: 3rem;">
+            <h2 style="text-align: center; color: var(--primary-color);">Related Tools</h2>
+            <div class="related-tools-grid">
+                <a href="bmi-calculator.html" class="related-tool-card">
+                    <div class="related-tool-icon">⚖️</div>
+                    <h4>BMI Calculator</h4>
+                    <p>Calculate your Body Mass Index</p>
+                </a>
+                <a href="currency-converter.html" class="related-tool-card">
+                    <div class="related-tool-icon">💱</div>
+                    <h4>Currency Converter</h4>
+                    <p>Convert world currencies</p>
+                </a>
+                <a href="time-calculator.html" class="related-tool-card">
+                    <div class="related-tool-icon">⏱️</div>
+                    <h4>Time Calculator</h4>
+                    <p>Calculate time durations</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section"><h3>MoneyCalcPro</h3><p>Your trusted source for free online calculators and financial tools.</p></div>
+            <div class="footer-section"><h3>Quick Links</h3><ul><li><a href="../index.html">Home</a></li><li><a href="../tools.html">Tools</a></li><li><a href="../blog.html">Blog</a></li><li><a href="../about.html">About Us</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+            <div class="footer-section"><h3>Legal</h3><ul><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../disclaimer.html">Disclaimer</a></li></ul></div>
+            <div class="footer-section"><h3>Contact</h3><ul><li>Subhan Ali</li><li>Email: subhanrajput3222@gmail.com</li><li>Phone: 0367342556</li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 MoneyCalcPro. All rights reserved. | Created by Subhan Ali</p></div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        const conversions = {
+            length: {
+                m: 1, km: 0.001, cm: 100, mm: 1000,
+                ft: 3.28084, in: 39.3701, mi: 0.000621371, yd: 1.09361
+            },
+            weight: {
+                kg: 1, g: 1000, mg: 1000000,
+                lb: 2.20462, oz: 35.274, ton: 0.001
+            }
+        };
+
+        document.getElementById('unitCategory').addEventListener('change', function() {
+            const category = this.value;
+            const fromSelect = document.getElementById('unitFrom');
+            const toSelect = document.getElementById('unitTo');
+            fromSelect.innerHTML = '';
+            toSelect.innerHTML = '';
+
+            if (category === 'length') {
+                const units = [['m','Meters'],['km','Kilometers'],['cm','Centimeters'],['ft','Feet'],['in','Inches']];
+                units.forEach(([val, label]) => {
+                    fromSelect.add(new Option(label, val));
+                    toSelect.add(new Option(label, val));
+                });
+                toSelect.value = 'ft';
+            } else if (category === 'weight') {
+                const units = [['kg','Kilograms'],['g','Grams'],['lb','Pounds'],['oz','Ounces']];
+                units.forEach(([val, label]) => {
+                    fromSelect.add(new Option(label, val));
+                    toSelect.add(new Option(label, val));
+                });
+                toSelect.value = 'lb';
+            } else if (category === 'temperature') {
+                const units = [['C','Celsius'],['F','Fahrenheit'],['K','Kelvin']];
+                units.forEach(([val, label]) => {
+                    fromSelect.add(new Option(label, val));
+                    toSelect.add(new Option(label, val));
+                });
+                toSelect.value = 'F';
+            }
+        });
+
+        document.getElementById('unitConvert').addEventListener('click', function() {
+            const category = document.getElementById('unitCategory').value;
+            const value = parseFloat(document.getElementById('unitValue').value);
+            const from = document.getElementById('unitFrom').value;
+            const to = document.getElementById('unitTo').value;
+            const resultDiv = document.getElementById('unitResult');
+
+            if (!value) {
+                showNotification('Please enter a value', 'error');
+                return;
+            }
+
+            let result;
+            
+            if (category === 'temperature') {
+                let celsius;
+                if (from === 'C') celsius = value;
+                else if (from === 'F') celsius = (value - 32) * 5/9;
+                else celsius = value - 273.15;
+
+                if (to === 'C') result = celsius;
+                else if (to === 'F') result = (celsius * 9/5) + 32;
+                else result = celsius + 273.15;
+            } else {
+                const baseValue = value / conversions[category][from];
+                result = baseValue * conversions[category][to];
+            }
+
+            resultDiv.innerHTML = `
+                <div style="margin-bottom: 0.5rem; font-size: 1.2rem;">
+                    <strong>${value} ${from} = ${result.toFixed(4)} ${to}</strong>
+                </div>
+            `;
+            resultDiv.style.display = 'block';
+        });
+
+        document.getElementById('unitCategory').dispatchEvent(new Event('change'));
+    </script>
+</body>
+</html>

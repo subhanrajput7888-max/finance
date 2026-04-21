@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Calculate your Body Mass Index (BMI) instantly with our free BMI Calculator. Get health category and personalized tips.">
+    <meta name="keywords" content="BMI calculator, body mass index, health calculator, weight checker, BMI chart, healthy weight">
+    <meta name="author" content="Subhan Ali">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.moneycalcpro.site/tools/bmi-calculator.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.moneycalcpro.site/tools/bmi-calculator.html">
+    <meta property="og:title" content="Free BMI Calculator - Body Mass Index Calculator | MoneyCalcPro">
+    <meta property="og:description" content="Calculate your Body Mass Index (BMI) and check if you are at a healthy weight. Free BMI calculator.">
+    <meta property="og:site_name" content="MoneyCalcPro">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free BMI Calculator - Body Mass Index Calculator">
+    <meta name="twitter:description" content="Calculate BMI instantly with health tips. 100% free.">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "BMI Calculator - MoneyCalcPro",
+        "description": "Free online BMI calculator for body mass index",
+        "url": "https://www.moneycalcpro.site/tools/bmi-calculator.html",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    
+    <title>BMI Calculator - Calculate Your Body Mass Index | MoneyCalcPro</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://i.ibb.co/fV6XRsFY/logo.png" alt="MoneyCalcPro Logo" onerror="this.style.display='none'">
+                <span class="logo-text">MoneyCalcPro</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../tools.html">Tools</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="../index.html">Home</a> > <a href="../tools.html">Tools</a> > <span>BMI Calculator</span>
+    </nav>
+
+    <section class="container" style="padding: 1rem 2rem 0;">
+        <a href="../tools.html" class="btn" style="display: inline-block; margin-bottom: 1rem;">← Back to All Tools</a>
+    </section>
+
+    <section class="hero" style="padding: 3rem 2rem;">
+        <div class="hero-content">
+            <h1>BMI Calculator</h1>
+            <p>Calculate your Body Mass Index and assess your health</p>
+        </div>
+    </section>
+
+    <section class="tool-detail-section">
+        <div class="tool-card" style="max-width: 600px; margin: 0 auto;">
+            <div class="tool-header">
+                <div class="tool-icon">⚖️</div>
+                <h3 class="tool-title">Calculate Your BMI</h3>
+            </div>
+            <div class="form-group">
+                <label for="bmiWeight">Weight (kg)</label>
+                <input type="number" id="bmiWeight" placeholder="e.g., 70">
+            </div>
+            <div class="form-group">
+                <label for="bmiHeight">Height (cm)</label>
+                <input type="number" id="bmiHeight" placeholder="e.g., 175">
+            </div>
+            <button class="btn" id="bmiCalculate" style="width: 100%;">Calculate BMI</button>
+            <div id="bmiResult" class="result-box" style="display: none;"></div>
+        </div>
+
+        <div class="tool-info-section">
+            <h2>What is BMI?</h2>
+            <p>BMI (Body Mass Index) is a simple calculation that uses your height and weight to estimate whether you're at a healthy weight. It's widely used by healthcare professionals as a screening tool to categorize individuals into different weight categories.</p>
+            <p>While BMI doesn't directly measure body fat or account for muscle mass, it provides a quick and easy way to assess whether your weight might be putting your health at risk. Our calculator not only gives you your BMI but also provides your health category and personalized tips.</p>
+
+            <h2>BMI Categories</h2>
+            <ul>
+                <li><strong>Underweight:</strong> BMI less than 18.5</li>
+                <li><strong>Normal weight:</strong> BMI 18.5 – 24.9</li>
+                <li><strong>Overweight:</strong> BMI 25 – 29.9</li>
+                <li><strong>Obese:</strong> BMI 30 or greater</li>
+            </ul>
+
+            <h2>Formula</h2>
+            <div class="formula-box">BMI = weight (kg) / [height (m)]²</div>
+            <p>Where:</p>
+            <ul>
+                <li>Weight is measured in kilograms (kg)</li>
+                <li>Height is measured in meters (m)</li>
+                <li>Result is expressed as kg/m²</li>
+            </ul>
+
+            <h2>Example Calculation</h2>
+            <div class="example-box">
+                <p><strong>Sample Calculation:</strong></p>
+                <ul>
+                    <li>Weight: 70 kg</li>
+                    <li>Height: 175 cm (1.75 m)</li>
+                    <li>BMI = 70 / (1.75 × 1.75)</li>
+                    <li>BMI = 70 / 3.0625</li>
+                    <li><strong>BMI = 22.86 (Normal weight)</strong></li>
+                </ul>
+            </div>
+
+            <h2>Health Implications</h2>
+            <p><strong>Underweight:</strong> May indicate malnutrition or other health issues. Consider consulting a nutritionist.</p>
+            <p><strong>Normal weight:</strong> Great! Maintain your healthy lifestyle with balanced diet and regular exercise.</p>
+            <p><strong>Overweight:</strong> Increased risk of cardiovascular diseases. Consider regular exercise and balanced diet.</p>
+            <p><strong>Obese:</strong> Higher risk of serious health conditions. Please consult a healthcare professional.</p>
+
+            <h2>Benefits</h2>
+            <ul class="benefits-list">
+                <li>Quick health assessment in seconds</li>
+                <li>Understand your weight category</li>
+                <li>Track changes over time</li>
+                <li>Free and easy to use</li>
+                <li>Get personalized health tips</li>
+                <li>No registration required</li>
+            </ul>
+
+            <h2>Frequently Asked Questions</h2>
+            <h3>Is BMI accurate for everyone?</h3>
+            <p>BMI is a screening tool, not a diagnostic measure. It doesn't account for muscle mass, bone density, or fat distribution. Athletes with high muscle mass may have high BMI but low body fat.</p>
+
+            <h3>What's a healthy BMI range?</h3>
+            <p>A BMI between 18.5 and 24.9 is considered healthy for most adults. However, ideal BMI can vary based on age, gender, and ethnicity.</p>
+
+            <h3>How often should I check my BMI?</h3>
+            <p>Checking once a month is sufficient for most people. Focus on long-term trends rather than daily fluctuations.</p>
+
+            <h2>Tips for Maintaining Healthy BMI</h2>
+            <ol>
+                <li>Eat a balanced diet rich in fruits and vegetables</li>
+                <li>Exercise regularly (at least 150 minutes per week)</li>
+                <li>Stay hydrated (drink 8 glasses of water daily)</li>
+                <li>Get adequate sleep (7-9 hours per night)</li>
+                <li>Limit processed foods and sugary drinks</li>
+                <li>Manage stress through meditation or yoga</li>
+            </ol>
+        </div>
+
+        <div style="margin-top: 3rem;">
+            <h2 style="text-align: center; color: var(--primary-color);">Related Tools</h2>
+            <div class="related-tools-grid">
+                <a href="age-calculator.html" class="related-tool-card">
+                    <div class="related-tool-icon">🎂</div>
+                    <h4>Age Calculator</h4>
+                    <p>Calculate your exact age</p>
+                </a>
+                <a href="percentage-calculator.html" class="related-tool-card">
+                    <div class="related-tool-icon">📊</div>
+                    <h4>Percentage Calculator</h4>
+                    <p>Quick percentage calculations</p>
+                </a>
+                <a href="unit-converter.html" class="related-tool-card">
+                    <div class="related-tool-icon">📏</div>
+                    <h4>Unit Converter</h4>
+                    <p>Convert between different units</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section"><h3>MoneyCalcPro</h3><p>Your trusted source for free online calculators and financial tools.</p></div>
+            <div class="footer-section"><h3>Quick Links</h3><ul><li><a href="../index.html">Home</a></li><li><a href="../tools.html">Tools</a></li><li><a href="../blog.html">Blog</a></li><li><a href="../about.html">About Us</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+            <div class="footer-section"><h3>Legal</h3><ul><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../disclaimer.html">Disclaimer</a></li></ul></div>
+            <div class="footer-section"><h3>Contact</h3><ul><li>Subhan Ali</li><li>Email: subhanrajput3222@gmail.com</li><li>Phone: 0367342556</li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 MoneyCalcPro. All rights reserved. | Created by Subhan Ali</p></div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('bmiCalculate').addEventListener('click', function() {
+            const weight = parseFloat(document.getElementById('bmiWeight').value);
+            const height = parseFloat(document.getElementById('bmiHeight').value);
+            const resultDiv = document.getElementById('bmiResult');
+
+            if (!weight || !height) {
+                showNotification('Please fill in all fields', 'error');
+                return;
+            }
+
+            const heightInMeters = height / 100;
+            const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(2);
+            
+            let category = '';
+            let tip = '';
+            if (bmi < 18.5) {
+                category = 'Underweight';
+                tip = 'Consider consulting a nutritionist for a healthy weight gain plan.';
+            } else if (bmi < 25) {
+                category = 'Normal weight';
+                tip = 'Great job! Maintain your healthy lifestyle.';
+            } else if (bmi < 30) {
+                category = 'Overweight';
+                tip = 'Consider regular exercise and a balanced diet.';
+            } else {
+                category = 'Obese';
+                tip = 'Please consult a healthcare professional for guidance.';
+            }
+
+            resultDiv.innerHTML = `
+                <div style="margin-bottom: 0.5rem;">Your BMI: <strong>${bmi}</strong></div>
+                <div style="font-size: 1rem;">Category: ${category}</div>
+                <div style="font-size: 0.9rem; margin-top: 0.5rem;">${tip}</div>
+            `;
+            resultDiv.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

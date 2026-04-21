@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Generate random numbers instantly within any range. Perfect for games, contests, and decision making.">
+    <meta name="keywords" content="random number generator, lottery numbers, random picker, dice roll, number generator, RNG">
+    <meta name="author" content="Subhan Ali">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.moneycalcpro.site/tools/random-number-generator.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.moneycalcpro.site/tools/random-number-generator.html">
+    <meta property="og:title" content="Free Random Number Generator - Lottery & Dice | MoneyCalcPro">
+    <meta property="og:description" content="Generate random numbers for lotteries, games, and more. Free online RNG.">
+    <meta property="og:site_name" content="MoneyCalcPro">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Random Number Generator - Lottery & Dice">
+    <meta name="twitter:description" content="Generate random numbers instantly. 100% free.">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Random Number Generator - MoneyCalcPro",
+        "description": "Free online random number generator",
+        "url": "https://www.moneycalcpro.site/tools/random-number-generator.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    
+    <title>Random Number Generator - Generate Random Numbers | MoneyCalcPro</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://i.ibb.co/fV6XRsFY/logo.png" alt="MoneyCalcPro Logo" onerror="this.style.display='none'">
+                <span class="logo-text">MoneyCalcPro</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../tools.html">Tools</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="../index.html">Home</a> > <a href="../tools.html">Tools</a> > <span>Random Number Generator</span>
+    </nav>
+
+    <section class="container" style="padding: 1rem 2rem 0;">
+        <a href="../tools.html" class="btn" style="display: inline-block; margin-bottom: 1rem;">← Back to All Tools</a>
+    </section>
+
+    <section class="hero" style="padding: 3rem 2rem;">
+        <div class="hero-content">
+            <h1>Random Number Generator</h1>
+            <p>Generate random numbers instantly within any range</p>
+        </div>
+    </section>
+
+    <section class="tool-detail-section">
+        <div class="tool-card" style="max-width: 600px; margin: 0 auto;">
+            <div class="tool-header">
+                <div class="tool-icon">🎲</div>
+                <h3 class="tool-title">Generate Random Number</h3>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group">
+                    <label for="randMin">Minimum</label>
+                    <input type="number" id="randMin" placeholder="e.g., 1" value="1">
+                </div>
+                <div class="form-group">
+                    <label for="randMax">Maximum</label>
+                    <input type="number" id="randMax" placeholder="e.g., 100" value="100">
+                </div>
+            </div>
+            <button class="btn" id="randGenerate" style="width: 100%;">Generate Number</button>
+            <div id="randResult" class="result-box" style="display: none;"></div>
+        </div>
+
+        <div class="tool-info-section">
+            <h2>What is a Random Number Generator?</h2>
+            <p>A Random Number Generator (RNG) creates unpredictable numbers within a specified range. These numbers are essential for games, contests, statistical sampling, cryptography, and any situation where you need unbiased, random selection.</p>
+            <p>Our tool generates truly random integers instantly. Simply set your minimum and maximum values, and get a random number with one click!</p>
+
+            <h2>How Random Number Generation Works</h2>
+            <p>Computers use algorithms to generate pseudo-random numbers that appear random for practical purposes:</p>
+            <ul>
+                <li><strong>Math.random():</strong> JavaScript's built-in random function</li>
+                <li><strong>Range calculation:</strong> Scales the random value to your specified range</li>
+                <li><strong>Rounding:</strong> Converts to whole numbers (integers)</li>
+                <li><strong>Uniform distribution:</strong> Every number has equal probability</li>
+            </ul>
+
+            <h2>Formula</h2>
+            <div class="formula-box">
+                Random Number = Math.floor(Math.random() × (Max - Min + 1)) + Min
+            </div>
+            <p>Where:</p>
+            <ul>
+                <li>Math.random() generates 0 to 0.999...</li>
+                <li>Multiplied by range size (Max - Min + 1)</li>
+                <li>Floored to get whole number</li>
+                <li>Minimum value added to shift range</li>
+            </ul>
+
+            <h2>Example Usage</h2>
+            <div class="example-box">
+                <p><strong>Example 1: Dice Roll</strong></p>
+                <ul>
+                    <li>Min: 1, Max: 6</li>
+                    <li>Result: Random number between 1-6</li>
+                    <li>Perfect for board games!</li>
+                </ul>
+                <p><strong>Example 2: Lottery Numbers</strong></p>
+                <ul>
+                    <li>Min: 1, Max: 100</li>
+                    <li>Result: Random number between 1-100</li>
+                    <li>Great for contests and giveaways!</li>
+                </ul>
+            </div>
+
+            <h2>Common Applications</h2>
+            <ul class="benefits-list">
+                <li>Dice rolls for board games</li>
+                <li>Contest winner selection</li>
+                <li>Random team assignments</li>
+                <li>Statistical sampling</li>
+                <li>Cryptography and security</li>
+                <li>Scientific simulations</li>
+            </ul>
+
+            <h2>Frequently Asked Questions</h2>
+            <h3>Are these numbers truly random?</h3>
+            <p>They're "pseudo-random" - good enough for games and general use. For cryptographic security, use specialized cryptographic RNGs.</p>
+
+            <h3>Can I generate decimal numbers?</h3>
+            <p>This generator creates whole numbers (integers). For decimals, you'd need to modify the formula to remove the Math.floor() function.</p>
+
+            <h3>Is every number equally likely?</h3>
+            <p>Yes! Our generator uses uniform distribution, meaning every number in your range has exactly the same probability of being selected.</p>
+
+            <h2>Fun Uses</h2>
+            <ol>
+                <li>Decide where to eat (assign numbers to restaurants)</li>
+                <li>Random movie picker for movie night</li>
+                <li>Generate lottery numbers</li>
+                <li>Create random passwords (combine with Password Generator)</li>
+                <li>Settle debates fairly</li>
+                <li>Create randomized quiz questions</li>
+            </ol>
+        </div>
+
+        <div style="margin-top: 3rem;">
+            <h2 style="text-align: center; color: var(--primary-color);">Related Tools</h2>
+            <div class="related-tools-grid">
+                <a href="password-generator.html" class="related-tool-card">
+                    <div class="related-tool-icon">🔐</div>
+                    <h4>Password Generator</h4>
+                    <p>Create secure passwords</p>
+                </a>
+                <a href="time-calculator.html" class="related-tool-card">
+                    <div class="related-tool-icon">⏱️</div>
+                    <h4>Time Calculator</h4>
+                    <p>Calculate time durations</p>
+                </a>
+                <a href="percentage-calculator.html" class="related-tool-card">
+                    <div class="related-tool-icon">📊</div>
+                    <h4>Percentage Calculator</h4>
+                    <p>Calculate percentages</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section"><h3>MoneyCalcPro</h3><p>Your trusted source for free online calculators and financial tools.</p></div>
+            <div class="footer-section"><h3>Quick Links</h3><ul><li><a href="../index.html">Home</a></li><li><a href="../tools.html">Tools</a></li><li><a href="../blog.html">Blog</a></li><li><a href="../about.html">About Us</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+            <div class="footer-section"><h3>Legal</h3><ul><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../disclaimer.html">Disclaimer</a></li></ul></div>
+            <div class="footer-section"><h3>Contact</h3><ul><li>Subhan Ali</li><li>Email: subhanrajput3222@gmail.com</li><li>Phone: 0367342556</li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 MoneyCalcPro. All rights reserved. | Created by Subhan Ali</p></div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('randGenerate').addEventListener('click', function() {
+            const min = parseInt(document.getElementById('randMin').value);
+            const max = parseInt(document.getElementById('randMax').value);
+            const resultDiv = document.getElementById('randResult');
+
+            if (isNaN(min) || isNaN(max)) {
+                showNotification('Please enter valid numbers', 'error');
+                return;
+            }
+
+            if (min >= max) {
+                showNotification('Minimum must be less than maximum', 'error');
+                return;
+            }
+
+            const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+            resultDiv.innerHTML = `
+                <div style="margin-bottom: 0.5rem; font-size: 3rem; text-align: center; color: var(--primary-color);">
+                    <strong>${randomNumber}</strong>
+                </div>
+                <div style="font-size: 0.9rem; text-align: center;">Range: ${min} to ${max}</div>
+            `;
+            resultDiv.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Calculate profit and loss percentage instantly. Determine if you're making profit or loss with our free calculator.">
+    <meta name="keywords" content="profit loss calculator, business profit, margin calculator, ROI, revenue calculator, profit margin">
+    <meta name="author" content="Subhan Ali">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.moneycalcpro.site/tools/profit-loss-calculator.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.moneycalcpro.site/tools/profit-loss-calculator.html">
+    <meta property="og:title" content="Free Profit Loss Calculator - Business Profit Margin | MoneyCalcPro">
+    <meta property="og:description" content="Calculate profit, loss, and margin percentages. Free business calculator.">
+    <meta property="og:site_name" content="MoneyCalcPro">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Profit Loss Calculator - Business Profit Margin">
+    <meta name="twitter:description" content="Calculate business profit and loss instantly. 100% free.">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Profit Loss Calculator - MoneyCalcPro",
+        "description": "Free online profit and loss calculator for business",
+        "url": "https://www.moneycalcpro.site/tools/profit-loss-calculator.html",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    
+    <title>Profit/Loss Calculator - Calculate Business Profit | MoneyCalcPro</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://i.ibb.co/fV6XRsFY/logo.png" alt="MoneyCalcPro Logo" onerror="this.style.display='none'">
+                <span class="logo-text">MoneyCalcPro</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../tools.html">Tools</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="../index.html">Home</a> > <a href="../tools.html">Tools</a> > <span>Profit/Loss Calculator</span>
+    </nav>
+
+    <section class="container" style="padding: 1rem 2rem 0;">
+        <a href="../tools.html" class="btn" style="display: inline-block; margin-bottom: 1rem;">← Back to All Tools</a>
+    </section>
+
+    <section class="hero" style="padding: 3rem 2rem;">
+        <div class="hero-content">
+            <h1>Profit/Loss Calculator</h1>
+            <p>Calculate your business profit or loss percentage</p>
+        </div>
+    </section>
+
+    <section class="tool-detail-section">
+        <div class="tool-card" style="max-width: 600px; margin: 0 auto;">
+            <div class="tool-header">
+                <div class="tool-icon">💹</div>
+                <h3 class="tool-title">Calculate Profit or Loss</h3>
+            </div>
+            <div class="form-group">
+                <label for="costPrice">Cost Price ($)</label>
+                <input type="number" id="costPrice" placeholder="e.g., 100">
+            </div>
+            <div class="form-group">
+                <label for="sellingPrice">Selling Price ($)</label>
+                <input type="number" id="sellingPrice" placeholder="e.g., 150">
+            </div>
+            <button class="btn" id="profitLossCalculate" style="width: 100%;">Calculate Profit/Loss</button>
+            <div id="profitLossResult" class="result-box" style="display: none;"></div>
+        </div>
+
+        <div class="tool-info-section">
+            <h2>What is a Profit/Loss Calculator?</h2>
+            <p>A Profit/Loss Calculator helps you determine whether you're making money or losing money on a transaction. It calculates the exact profit or loss amount and percentage, giving you clear insights into your business performance.</p>
+            <p>Whether you're running a small business, trading stocks, or selling items online, this tool helps you track your financial performance and make informed pricing decisions.</p>
+
+            <h2>Key Concepts</h2>
+            <ul>
+                <li><strong>Cost Price (CP):</strong> What you paid to acquire or produce the item</li>
+                <li><strong>Selling Price (SP):</strong> What you sold the item for</li>
+                <li><strong>Profit:</strong> When SP > CP (you made money)</li>
+                <li><strong>Loss:</strong> When CP > SP (you lost money)</li>
+            </ul>
+
+            <h2>Formulas</h2>
+            <div class="formula-box">
+                <strong>Profit:</strong><br>
+                Profit = Selling Price - Cost Price<br>
+                Profit % = (Profit / Cost Price) × 100<br><br>
+                <strong>Loss:</strong><br>
+                Loss = Cost Price - Selling Price<br>
+                Loss % = (Loss / Cost Price) × 100
+            </div>
+
+            <h2>Example Calculations</h2>
+            <div class="example-box">
+                <p><strong>Example 1: Profit Scenario</strong></p>
+                <ul>
+                    <li>Cost Price: $100</li>
+                    <li>Selling Price: $150</li>
+                    <li>Profit: $50</li>
+                    <li><strong>Profit Percentage: 50%</strong></li>
+                </ul>
+                <p><strong>Example 2: Loss Scenario</strong></p>
+                <ul>
+                    <li>Cost Price: $200</li>
+                    <li>Selling Price: $160</li>
+                    <li>Loss: $40</li>
+                    <li><strong>Loss Percentage: 20%</strong></li>
+                </ul>
+            </div>
+
+            <h2>Benefits</h2>
+            <ul class="benefits-list">
+                <li>Instant profit/loss calculation</li>
+                <li>Track business performance</li>
+                <li>Make informed pricing decisions</li>
+                <li>Calculate profit margins quickly</li>
+                <li>Perfect for retailers and traders</li>
+                <li>Free and easy to use</li>
+            </ul>
+
+            <h2>Frequently Asked Questions</h2>
+            <h3>What's a good profit margin?</h3>
+            <p>It varies by industry. Retail typically sees 20-50%, restaurants 3-15%, and software companies 80%+. Research your specific industry benchmarks.</p>
+
+            <h3>How do I increase profit margin?</h3>
+            <p>Increase selling price, reduce cost price, improve operational efficiency, negotiate better with suppliers, or add value to justify higher prices.</p>
+
+            <h3>What's the difference between profit and profit margin?</h3>
+            <p>Profit is the absolute amount earned ($50). Profit margin is the percentage relative to cost (50%). Margin helps compare profitability across different products.</p>
+
+            <h2>Business Tips</h2>
+            <ol>
+                <li>Always track both revenue and costs</li>
+                <li>Calculate profit margin for each product</li>
+                <li>Focus on high-margin items</li>
+                <li>Negotiate better supplier deals</li>
+                <li>Reduce overhead costs where possible</li>
+                <li>Regularly review and adjust pricing</li>
+            </ol>
+        </div>
+
+        <div style="margin-top: 3rem;">
+            <h2 style="text-align: center; color: var(--primary-color);">Related Tools</h2>
+            <div class="related-tools-grid">
+                <a href="discount-calculator.html" class="related-tool-card">
+                    <div class="related-tool-icon">🏷️</div>
+                    <h4>Discount Calculator</h4>
+                    <p>Calculate savings</p>
+                </a>
+                <a href="gst-calculator.html" class="related-tool-card">
+                    <div class="related-tool-icon">🧾</div>
+                    <h4>GST Calculator</h4>
+                    <p>Calculate taxes</p>
+                </a>
+                <a href="percentage-calculator.html" class="related-tool-card">
+                    <div class="related-tool-icon">📊</div>
+                    <h4>Percentage Calculator</h4>
+                    <p>Calculate percentages</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section"><h3>MoneyCalcPro</h3><p>Your trusted source for free online calculators and financial tools.</p></div>
+            <div class="footer-section"><h3>Quick Links</h3><ul><li><a href="../index.html">Home</a></li><li><a href="../tools.html">Tools</a></li><li><a href="../blog.html">Blog</a></li><li><a href="../about.html">About Us</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+            <div class="footer-section"><h3>Legal</h3><ul><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../disclaimer.html">Disclaimer</a></li></ul></div>
+            <div class="footer-section"><h3>Contact</h3><ul><li>Subhan Ali</li><li>Email: subhanrajput3222@gmail.com</li><li>Phone: 0367342556</li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 MoneyCalcPro. All rights reserved. | Created by Subhan Ali</p></div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('profitLossCalculate').addEventListener('click', function() {
+            const cp = parseFloat(document.getElementById('costPrice').value);
+            const sp = parseFloat(document.getElementById('sellingPrice').value);
+            const resultDiv = document.getElementById('profitLossResult');
+
+            if (!cp || !sp) {
+                showNotification('Please fill in all fields', 'error');
+                return;
+            }
+
+            const difference = sp - cp;
+            const percentage = (Math.abs(difference) / cp) * 100;
+
+            if (difference > 0) {
+                resultDiv.innerHTML = `
+                    <div style="margin-bottom: 0.5rem; color: var(--secondary-color);">
+                        <strong>✅ Profit: $${difference.toFixed(2)}</strong>
+                    </div>
+                    <div style="font-size: 0.9rem;">Profit Percentage: ${percentage.toFixed(2)}%</div>
+                `;
+            } else if (difference < 0) {
+                resultDiv.innerHTML = `
+                    <div style="margin-bottom: 0.5rem; color: #dc2626;">
+                        <strong>❌ Loss: $${Math.abs(difference).toFixed(2)}</strong>
+                    </div>
+                    <div style="font-size: 0.9rem;">Loss Percentage: ${percentage.toFixed(2)}%</div>
+                `;
+            } else {
+                resultDiv.innerHTML = `
+                    <div style="margin-bottom: 0.5rem;">
+                        <strong>No Profit, No Loss</strong>
+                    </div>
+                    <div style="font-size: 0.9rem;">Selling Price equals Cost Price</div>
+                `;
+            }
+            resultDiv.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- Main Pages -->
+    <url>
+        <loc>https://www.moneycalcpro.site/</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.00</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/index.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.00</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/tools.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/about.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/contact.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <!-- Legal Pages -->
+    <url>
+        <loc>https://www.moneycalcpro.site/privacy.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.50</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/terms.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.50</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/disclaimer.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.50</priority>
+    </url>
+    
+    <!-- Tools Directory -->
+    <url>
+        <loc>https://www.moneycalcpro.site/tools/index.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    
+    <!-- Financial Calculators (8 tools) -->
+    <url>
+        <loc>https://www.moneycalcpro.site/tools/emi-calculator.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/tools/loan-calculator.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/tools/investment-calculator.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/tools/mortgage-calculator.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/tools/currency-converter.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.88</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/tools/discount-calculator.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.88</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/tools/gst-calculator.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.88</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/tools/profit-loss-calculator.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.88</priority>
+    </url>
+    
+    <!-- Health & Personal Calculators (2 tools) -->
+    <url>
+        <loc>https://www.moneycalcpro.site/tools/bmi-calculator.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/tools/age-calculator.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <!-- Utility Tools (5 tools) -->
+    <url>
+        <loc>https://www.moneycalcpro.site/tools/percentage-calculator.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/tools/password-generator.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/tools/unit-converter.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/tools/time-calculator.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/tools/random-number-generator.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <!-- Blog Articles - Finance (5 articles) -->
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-1.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-2.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-3.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-4.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-5.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <!-- Blog Articles - Insurance (5 articles) -->
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-6.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-7.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-8.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-9.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-10.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <!-- Blog Articles - Home (5 articles) -->
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-11.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-12.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-13.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-14.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-15.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <!-- Blog Articles - Garden (5 articles) -->
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-16.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-17.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-18.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-19.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.moneycalcpro.site/blog-articles/article-20.html</loc>
+        <lastmod>2024-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+</urlset>
